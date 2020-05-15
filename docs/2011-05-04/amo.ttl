@@ -1,0 +1,288 @@
+@prefix : <http://purl.org/spar/amo/> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:creator a owl:AnnotationProperty .
+
+dc:date a owl:AnnotationProperty .
+
+dc:description a owl:AnnotationProperty .
+
+dc:rights a owl:AnnotationProperty .
+
+dc:title a owl:AnnotationProperty .
+
+<http://purl.org/spar/amo> a owl:Ontology ;
+    dc:creator "Fabio Vitali"^^xsd:string,
+        "Silvio Peroni"^^xsd:string ;
+    dc:date "2011-05-04" ;
+    dc:description <http://dwellonit.svn.sourceforge.net/svnroot/dwellonit/ArgumentModel/amo.png>,
+        """Throughout many of his works, Toulmin pointed out that absolutism (represented by theoretical or analytic arguments) has limited practical value. Absolutism is derived from Plato’s idealized formal logic, which advocates universal truth; accordingly, absolutists believe that moral issues can be resolved by adhering to a standard set of moral principles, regardless of context. By contrast, Toulmin asserts that many of these so-called standard principles are irrelevant to real situations encountered by human beings in daily life.
+
+To reinforce his assertion, Toulmin introduced the concept of argument fields; in 'The Uses of Argument (1958)', Toulmin states that some aspects of arguments vary from field to field, and are hence called 'field-dependent', while other aspects of argument are the same throughout all fields, and are hence called 'field-invariant'. The flaw of absolutism, Toulmin believes, lies in its unawareness of the field-dependent aspect of argument; absolutism assumes that all aspects of argument are field invariant.
+
+As consequence of those critiques, Toulmin aimed to develop a different type of argument, called practical arguments (also known as substantial arguments). In contrast to absolutists’ theoretical arguments, Toulmin’s practical argument is intended to focus on the justificatory function of argumentation, as opposed to the inferential function of theoretical arguments. Whereas theoretical arguments make inferences based on a set of principles to arrive at a claim, practical arguments first find a claim of interest, and then provide justification for it. Toulmin believed that reasoning is less an activity of inference, involving the discovering of new ideas, and more a process of testing and sifting already existing ideas—an act achievable through the process of justification.
+
+Toulmin believed that for a good argument to succeed, it needs to provide good justification for a claim. This, he believed, will ensure it stands up to criticism and earns a favourable verdict. Toulmin proposed a layout containing six interrelated components for analyzing arguments: claim, evidence, warrant, backing, qualifier and rebuttal.
+
+This ontology aims to encode the Toulmin's theory through OWL classes and properties, in order to describe a web of inter-linked entities that participate, with a specific role, in one or more arguments.
+
+Moreover, this ontology is aligned with CiTO, the Citation Typing Ontology (http://purl.org/spar/cito), an ontology for the characterization of citations, both factually and rhetorically that forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies."""@en,
+        """Nella maggior parte dei suoi lavori, Toulmin ha evidenziato come l'assolutismo (rappresentato da argomenti teorici o analitici) abbia un valore pratico limitato. L'assolutismo è derivato dalla logica formale idealizzata di Platone, che supporta pienamente la verità universale. Conformemente, gli assolutisti credono che le questioni morali possano essere risolte attraverso l'uso di ben stabiliti principi morali, in modo del tutto indipendente dal contesto. Contrariamente, Toulmin asseriscie che la maggior parte di questi così detti principi morali sono irrilevanti per le situazioni reali affrontate dagli esseri umani nella vita di tutti i giorni.
+
+Per dare più vigore a quest sua idea, Toulmin ha introdutto il concetto di campi argomentativi: in "The Uses of Argument (1958)", Toulmin afferma che alcuni aspetti dell'argomentazione variano da campo a campo e sono conseguentemente chiamati "dipendenti", mentre altri aspetti sono percepiti allo stesso modo in tutti i campi e vengono quindi chiamati "invarianti". Toulmin crede che il fallimento dell'assolutismo sia da amputare allo trascurare gli aspetti "dipendenti" dell'argomentazione; infatti l'assolutismo assume che tutti gli aspetti argomentativi siano "invarianti".
+
+Come conseguenza a queste critiche, Toulmin ha sviluppato un tipo differente di argomentazione, chiamato argomentazione pratica (anche conosciuto come argomentazione sostanziale). In contrasto con l'argomentazione teorica degli assolutisti, l'argomentazione pratica di Toulmin si focalizza sulla fuzione giustificativa dell'argomentazione, opposta alla funzione inferenziale dell'argomentazione teorica. Laddove l'argomentazione teorica produce inferenze sulla base di un insieme di principi per poi arrivare alla "pretesa", l'argomentazione pratica prima trova una "pretesa" di interesse per poi fornirne una giustificazione. Toulmin crede che il ragionamento sia meno un'attività di inferenza, che coinvolge l'identificazione di nuove idee, e più un processo di verifica di idee che già esistono - ovvero un atto raggiungibile attraverso il processo di giustificazione.
+
+Toulmin credeva che, per essere efficacie, una buona argomentazione necessita di una buona giustificazione per una "pretesa". Lui credeva che questo avrebbe permesso di resistere alle critiche e di guadagnare un verdetto favorevole. Toulmin proponeva una struttura contenente sei componenti intercorrelate per analizzare le argomentazioni: pretesa (claim), dato (evidence), garanzia (warrant), fondamento (backing), qualificatore (qualifier) e confutazione (rebuttal).
+
+Questa ontologia si propone di codificare la teoria di Toulmin attraverso classi e proprietà OWL in modo da descrivere una rete di entità intercollegate che partecipano, con un ruolo specifico, ad uno o più argomentazioni.
+
+In più, l'ontologia è allineata con CiTO (Citation Typing Ontology, http://purl.org/spar/cito), un'ontologia per la caratterizzazione di citazioni (fattuali e retoriche) che è parte di SPAR, una suite di ontologie per il Semantic Publishing and Referencing."""@it ;
+    dc:rights "This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0"@en,
+        "Questa ontologia è distribuita con licenza Creative Commons Attribution - http://creativecommons.org/licenses/by/3.0"@it ;
+    dc:title """The Argument Model Ontology
+(AMO)"""@en,
+        "Ontologia del Modello di Argomentazione"@it ;
+    rdfs:comment "The Argument Model Ontology is an OWL 2 DL ontology that allows to describe argumentation according to the 'Toulmin Model of Argument'."@en,
+        "L'Ontologia del Modello di Argomentazione è un'ontologia OWL 2 DL che permette la descrizione dell'apparato argomentativo conformemente alla teoria di Toulmin."@it ;
+    owl:imports cito: ;
+    owl:versionInfo "1.0"^^xsd:string .
+
+:backs a owl:ObjectProperty ;
+    rdfs:label "backs"@en ;
+    rdfs:comment "A backing that attests the warrant of an argument."@en ;
+    rdfs:domain :Backing ;
+    rdfs:range :Warrant ;
+    rdfs:subPropertyOf :relatesTo,
+        cito:givesBackgroundTo .
+
+:forces a owl:ObjectProperty ;
+    rdfs:label "forces"@en ;
+    dc:description "By means of the property chain defined, the assertion that links a qualifier to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en ;
+    rdfs:comment "A qualifier that expresses as degree of force concerning a claim of an argument."@en ;
+    rdfs:domain :Qualifier ;
+    rdfs:range :Claim ;
+    rdfs:subPropertyOf :relatesTo,
+        cito:qualifies ;
+    owl:propertyChainAxiom ( :isQualifierIn :hasClaim ) .
+
+:isValidUnless a owl:ObjectProperty ;
+    rdfs:label "is valid unless"@en ;
+    dc:description "By means of the property chain defined, the assertion that links a claim to the relative rebuttal is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en ;
+    rdfs:comment "A claim that is restricted by a rebuttal of an argument."@en ;
+    rdfs:domain :Claim ;
+    rdfs:range :Rebuttal ;
+    rdfs:subPropertyOf :relatesTo,
+        cito:isDisputedBy ;
+    owl:propertyChainAxiom ( :isClaimIn :hasRebuttal ) .
+
+:leadsTo a owl:ObjectProperty ;
+    rdfs:label "leads to"@en ;
+    dc:description "A warrant that points to a claim from the related evidence within an argument."@en,
+        "By means of the property chain defined, the assertion that links a warrant to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en ;
+    rdfs:domain :Warrant ;
+    rdfs:range :Claim ;
+    rdfs:subPropertyOf :relatesTo,
+        cito:confirms ;
+    owl:propertyChainAxiom ( :isWarrantIn :hasClaim ) .
+
+:proves a owl:ObjectProperty ;
+    rdfs:label "proves"@en ;
+    dc:description "By means of the property chain defined, the assertion that links an evidence to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en ;
+    rdfs:comment "An evidence that founds a claim of an argument."@en ;
+    rdfs:domain :Evidence ;
+    rdfs:range :Claim ;
+    rdfs:subPropertyOf :relatesTo,
+        cito:isCitedAsEvidenceBy ;
+    owl:propertyChainAxiom ( :isEvidenceIn :hasClaim ) .
+
+:supports a owl:ObjectProperty ;
+    rdfs:label "supports"@en ;
+    rdfs:comment "An evidence that supports a warrant of an argument."@en ;
+    rdfs:domain :Evidence ;
+    rdfs:range :Warrant ;
+    rdfs:subPropertyOf :relatesTo,
+        cito:givesSupportTo .
+
+:hasBacking a owl:ObjectProperty ;
+    rdfs:label "has backing"@en ;
+    rdfs:comment "An argument includes a backing as one of its (optional) components."@en ;
+    rdfs:domain :Argument ;
+    rdfs:range :Backing ;
+    rdfs:subPropertyOf :involves .
+
+:hasQualifier a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has qualifier"@en ;
+    rdfs:comment "An argument includes a qualifier as one of its (optional) components."@en ;
+    rdfs:domain :Argument ;
+    rdfs:range :Qualifier ;
+    rdfs:subPropertyOf :involves .
+
+:hasEvidence a owl:ObjectProperty ;
+    rdfs:label "has evidence"@en ;
+    rdfs:comment "An argument includes an evidence as one of its (mandatory) components."@en ;
+    rdfs:domain :Argument ;
+    rdfs:range :Evidence ;
+    rdfs:subPropertyOf :involves .
+
+:hasRebuttal a owl:ObjectProperty ;
+    rdfs:label "has rebuttal"@en ;
+    rdfs:comment "An argument includes a rebuttal as one of its (optional) components."@en ;
+    rdfs:domain :Argument ;
+    rdfs:range :Rebuttal ;
+    rdfs:subPropertyOf :involves .
+
+:hasWarrant a owl:ObjectProperty ;
+    rdfs:label "has warrant"@en ;
+    rdfs:comment "An argument includes a warrant as one of its (mandatory) components."@en ;
+    rdfs:domain :Argument ;
+    rdfs:range :Warrant ;
+    rdfs:subPropertyOf :involves .
+
+:isBackingIn a owl:ObjectProperty ;
+    rdfs:label "is backing in"@en ;
+    rdfs:comment "An argumentative entity linked to an argument in which it is considered a backing."@en ;
+    rdfs:subPropertyOf :isInvolvedIn ;
+    owl:inverseOf :hasBacking .
+
+:isRebuttalIn a owl:ObjectProperty ;
+    rdfs:label "is rebuttal in"@en ;
+    rdfs:comment "An argumentative entity linked to an argument in which it is considered a rebuttal."@en ;
+    rdfs:subPropertyOf :isInvolvedIn ;
+    owl:inverseOf :hasRebuttal .
+
+:Backing a owl:Class ;
+    rdfs:label "backing"@en ;
+    rdfs:comment "Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :ArgumentationEntity [ a owl:Restriction ;
+                        owl:onProperty :isBackingIn ;
+                        owl:someValuesFrom :Argument ] ) ] .
+
+:Rebuttal a owl:Class ;
+    rdfs:label "rebuttal"@en ;
+    rdfs:comment "Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :ArgumentationEntity [ a owl:Restriction ;
+                        owl:onProperty :isRebuttalIn ;
+                        owl:someValuesFrom :Argument ] ) ] .
+
+:isClaimIn a owl:ObjectProperty ;
+    rdfs:label "is claim in"@en ;
+    rdfs:comment "An argumentative entity linked to an argument in which it is considered a claim."@en ;
+    rdfs:subPropertyOf :isInvolvedIn ;
+    owl:inverseOf :hasClaim .
+
+:isEvidenceIn a owl:ObjectProperty ;
+    rdfs:label "is evidence in"@en ;
+    rdfs:comment "An argumentative entity linked to an argument in which it is considered an evidence."@en ;
+    rdfs:subPropertyOf :isInvolvedIn ;
+    owl:inverseOf :hasEvidence .
+
+:isQualifierIn a owl:ObjectProperty ;
+    rdfs:label "is qualifier in"@en ;
+    rdfs:comment "An sentence or word linked to an argument with the scope of qualifying the argument claim."@en ;
+    rdfs:subPropertyOf :isInvolvedIn ;
+    owl:inverseOf :hasQualifier .
+
+:isWarrantIn a owl:ObjectProperty ;
+    rdfs:label "is warrant in"@en ;
+    rdfs:comment "An argumentative entity linked to an argument in which it is considered a warrant."@en ;
+    rdfs:subPropertyOf :isInvolvedIn ;
+    owl:inverseOf :hasWarrant .
+
+:Evidence a owl:Class ;
+    rdfs:label "evidence"@en ;
+    rdfs:comment "A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :ArgumentationEntity [ a owl:Restriction ;
+                        owl:onProperty :isEvidenceIn ;
+                        owl:someValuesFrom :Argument ] ) ] .
+
+:Qualifier a owl:Class ;
+    rdfs:label "qualifier"@en ;
+    rdfs:comment "Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc."@en ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty :isQualifierIn ;
+            owl:someValuesFrom :Argument ] .
+
+:Warrant a owl:Class ;
+    rdfs:label "warrant"@en ;
+    rdfs:comment """A statement bridging from the evidence to the claim - e.g., 'An ontology developed in OWL is a consistent OWL ontology'.
+"""@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :ArgumentationEntity [ a owl:Restriction ;
+                        owl:onProperty :isWarrantIn ;
+                        owl:someValuesFrom :Argument ] ) ] .
+
+:hasClaim a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has claim"@en ;
+    rdfs:comment "An argument includes a claim as one of its (mandatory) components."@en ;
+    rdfs:domain :Argument ;
+    rdfs:range :Claim ;
+    rdfs:subPropertyOf :involves .
+
+:Claim a owl:Class ;
+    rdfs:label "claim"@en ;
+    rdfs:comment "A fact that must be established - e.g., 'This is a consistent OWL ontology'."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :ArgumentationEntity [ a owl:Restriction ;
+                        owl:onProperty :isClaimIn ;
+                        owl:someValuesFrom :Argument ] ) ] .
+
+:relatesTo a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "relates to"@en ;
+    rdfs:comment "An argumentation entity relates to another one in some way - for example, it is the evidence that is used to prove a claim of an argument."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :ArgumentationEntity :Qualifier ) ] ;
+    rdfs:range :ArgumentationEntity .
+
+:involves a owl:ObjectProperty ;
+    rdfs:label "involves"@en ;
+    dc:description "This property and its sub-properties serve to describe an argument from an high-level perspective (i.e., which argumentation entities take part in it and what role they hold) rather than from a factual point of view (i.e., how argumentation entities are inter-linked between them)."@en ;
+    rdfs:comment "An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier."@en ;
+    rdfs:domain :Argument ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( :ArgumentationEntity :Qualifier ) ] .
+
+:isInvolvedIn a owl:ObjectProperty ;
+    rdfs:label "is involved in"@en ;
+    rdfs:comment "An argumentation entity involved in the presentation of an argument."@en ;
+    owl:inverseOf :involves .
+
+:ArgumentationEntity a owl:Class ;
+    rdfs:label "argumentation entity"@en ;
+    rdfs:comment "An entity that takes part in an argument according to the 'Toulmin model of argument'."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Class ;
+                        owl:unionOf ( :Backing :Claim :Evidence :Rebuttal :Warrant ) ] [ a owl:Restriction ;
+                        owl:onProperty :isInvolvedIn ;
+                        owl:someValuesFrom :Argument ] ) ] .
+
+:Argument a owl:Class ;
+    rdfs:label "argument"@en ;
+    dc:description <http://dwellonit.svn.sourceforge.net/svnroot/dwellonit/ArgumentModel/argument.png> ;
+    rdfs:comment """An argument, or practical argument according to the 'Toulmin model of argument', focuses on the justificatory function of argumentation: practical arguments first find a claim of interest, and then provide justification for it.
+
+Each argument must be analyzed according to six interrelated components: claim, evidence, warrant, backing, rebuttal and qualifier. The first three elements, 'claim', 'data' and 'warrant', are considered as the essential components of practical arguments, while the second triad, 'qualifier', 'backing', and 'rebuttal', may not be needed in some arguments."""@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty :hasEvidence ] [ a owl:Restriction ;
+                        owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty :hasWarrant ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty :hasClaim ] ) ] .
+
+[] a owl:AllDisjointProperties ;
+    owl:members ( :isBackingIn :isClaimIn :isEvidenceIn :isQualifierIn :isRebuttalIn :isWarrantIn ) .
+
