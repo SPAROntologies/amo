@@ -1,0 +1,24 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:relatesTo a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "relates to"@en ;
+    vann:example """
+    :my-evidence a amo:Evidence ;
+        amo:relatesTo :my-claim .
+
+    :my-claim a amo:Claim .
+    """ ;
+    rdfs:comment "An argumentation entity relates to another one in some way - for example, it is the evidence that is used to prove a claim of an argument."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( amo:ArgumentationEntity amo:Qualifier ) ] ;
+    rdfs:isDefinedBy amo: ;
+    rdfs:range amo:ArgumentationEntity ;
+    vs:term_status reg:statusStable .
+

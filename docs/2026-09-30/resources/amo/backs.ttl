@@ -1,0 +1,24 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:backs a owl:ObjectProperty ;
+    rdfs:label "backs"@en ;
+    vann:example """
+    :my-backing a amo:Backing ;
+        amo:backs :my-warrant .
+
+    :my-warrant a amo:Warrant .
+    """ ;
+    rdfs:comment "A backing that attests the warrant of an argument."@en ;
+    rdfs:domain amo:Backing ;
+    rdfs:isDefinedBy amo: ;
+    rdfs:range amo:Warrant ;
+    rdfs:subPropertyOf amo:relatesTo,
+        cito:givesBackgroundTo ;
+    vs:term_status reg:statusStable .
+

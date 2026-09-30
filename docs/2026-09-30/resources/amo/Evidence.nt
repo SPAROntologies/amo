@@ -1,0 +1,16 @@
+<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2002/07/owl#equivalentClass> _:n1a0a3a68be7f463a92e2a2d38d5834b0b17 .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b17 <http://www.w3.org/2002/07/owl#intersectionOf> _:n1a0a3a68be7f463a92e2a2d38d5834b0b19 .
+<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2000/01/rdf-schema#label> "evidence"@en .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b18 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isEvidenceIn> .
+<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2000/01/rdf-schema#comment> "A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'."@en .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/Evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/Evidence> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:isEvidenceIn :my-argument ;\n        amo:proves :my-claim .\n    " .
+<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n1a0a3a68be7f463a92e2a2d38d5834b0b20 .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n1a0a3a68be7f463a92e2a2d38d5834b0b18 .

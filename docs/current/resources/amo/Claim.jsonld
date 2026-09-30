@@ -1,0 +1,74 @@
+[
+  {
+    "@id": "http://purl.org/spar/amo/Claim",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-claim a amo:Claim ;\n        amo:isClaimIn :my-argument ;\n        amo:isValidUnless :my-rebuttal .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A fact that must be established - e.g., 'This is a consistent OWL ontology'."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "claim"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b26"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b26",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/ArgumentationEntity"
+          },
+          {
+            "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b27"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b27",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/amo/isClaimIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ]
+  }
+]

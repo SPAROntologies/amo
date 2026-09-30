@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/involves">
+    <skos:note xml:lang="en">This property and its sub-properties serve to describe an argument from an high-level perspective (i.e., which argumentation entities take part in it and what role they hold) rather than from a factual point of view (i.e., how argumentation entities are inter-linked between them).</skos:note>
+    <rdfs:comment xml:lang="en">An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier.</rdfs:comment>
+    <vann:example>
+    :my-argument a amo:Argument ;
+        amo:involves :my-claim, 
+            :my-evidence, 
+            :my-warrant .
+    </vann:example>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:range rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b33"/>
+    <rdfs:label xml:lang="en">involves</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b35">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Qualifier"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b34">
+    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b35"/>
+    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b33">
+    <owl:unionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b34"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

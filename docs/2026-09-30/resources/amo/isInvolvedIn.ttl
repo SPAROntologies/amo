@@ -1,0 +1,20 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:isInvolvedIn a owl:ObjectProperty ;
+    rdfs:label "is involved in"@en ;
+    vann:example """
+    :my-claim 
+        amo:isInvolvedIn :my-argument .
+
+    :my-argument a amo:Argument .
+    """ ;
+    rdfs:comment "An argumentation entity involved in the presentation of an argument."@en ;
+    rdfs:isDefinedBy amo: ;
+    owl:inverseOf amo:involves ;
+    vs:term_status reg:statusStable .
+

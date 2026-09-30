@@ -1,0 +1,15 @@
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2004/02/skos/core#note> "This property and its sub-properties serve to describe an argument from an high-level perspective (i.e., which argumentation entities take part in it and what role they hold) rather than from a factual point of view (i.e., how argumentation entities are inter-linked between them)."@en .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier."@en .
+<http://purl.org/spar/amo/involves> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:involves :my-claim, \n            :my-evidence, \n            :my-warrant .\n    " .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Qualifier> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n1a0a3a68be7f463a92e2a2d38d5834b0b35 .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b33 <http://www.w3.org/2002/07/owl#unionOf> _:n1a0a3a68be7f463a92e2a2d38d5834b0b34 .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#range> _:n1a0a3a68be7f463a92e2a2d38d5834b0b33 .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#label> "involves"@en .

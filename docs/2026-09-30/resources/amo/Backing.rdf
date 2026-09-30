@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isBackingIn"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/Backing">
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vann:example>
+    :my-backing a amo:Backing ;
+        amo:isBackingIn :my-argument ;
+        amo:backs :my-warrant .
+    </vann:example>
+    <owl:equivalentClass rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b9"/>
+    <rdfs:comment xml:lang="en">Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:label xml:lang="en">backing</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b12">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b11">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
+    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b12"/>
+  </rdf:Description>
+</rdf:RDF>

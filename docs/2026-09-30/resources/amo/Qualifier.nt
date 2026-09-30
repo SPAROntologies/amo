@@ -1,0 +1,10 @@
+<http://purl.org/spar/amo/Qualifier> <http://purl.org/vocab/vann/example> "\n    :my-qualifier a amo:Qualifier ;\n        amo:isQualifierIn :my-argument ;\n        amo:forces :my-claim .\n    " .
+<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2002/07/owl#equivalentClass> _:n1a0a3a68be7f463a92e2a2d38d5834b0b21 .
+<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b21 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isQualifierIn> .
+<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc."@en .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2000/01/rdf-schema#label> "qualifier"@en .

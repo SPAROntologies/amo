@@ -1,0 +1,16 @@
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b13 <http://www.w3.org/2002/07/owl#intersectionOf> _:n1a0a3a68be7f463a92e2a2d38d5834b0b15 .
+<http://purl.org/spar/amo/Rebuttal> <http://purl.org/vocab/vann/example> "\n    :my-rebuttal a amo:Rebuttal ;\n        amo:isRebuttalIn :my-argument .\n\n    :my-claim \n        amo:isValidUnless :my-rebuttal .\n    " .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b14 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isRebuttalIn> .
+<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2000/01/rdf-schema#comment> "Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'."@en .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2002/07/owl#equivalentClass> _:n1a0a3a68be7f463a92e2a2d38d5834b0b13 .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n1a0a3a68be7f463a92e2a2d38d5834b0b14 .
+<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n1a0a3a68be7f463a92e2a2d38d5834b0b16 .
+<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2000/01/rdf-schema#label> "rebuttal"@en .

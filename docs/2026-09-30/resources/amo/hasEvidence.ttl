@@ -1,0 +1,20 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:hasEvidence a owl:ObjectProperty ;
+    rdfs:label "has evidence"@en ;
+    vann:example """
+    :my-argument a amo:Argument ;
+        amo:hasEvidence :my-evidence .
+    """ ;
+    rdfs:comment "An argument includes an evidence as one of its (mandatory) components."@en ;
+    rdfs:domain amo:Argument ;
+    rdfs:isDefinedBy amo: ;
+    rdfs:range amo:Evidence ;
+    rdfs:subPropertyOf amo:involves ;
+    vs:term_status reg:statusStable .
+

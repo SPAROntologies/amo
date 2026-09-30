@@ -1,0 +1,16 @@
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2004/02/skos/core#note> "A warrant that points to a claim from the related evidence within an argument."@en .
+<http://purl.org/spar/amo/leadsTo> <http://purl.org/vocab/vann/example> "\n    :my-warrant a amo:Warrant ;\n        amo:leadsTo :my-claim .\n\n    :my-claim a amo:Claim ." .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/confirms> .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#label> "leads to"@en .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Warrant> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Claim> .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:n1a0a3a68be7f463a92e2a2d38d5834b0b5 .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n1a0a3a68be7f463a92e2a2d38d5834b0b6 .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/hasClaim> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isWarrantIn> .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2004/02/skos/core#note> "By means of the property chain defined, the assertion that links a warrant to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .

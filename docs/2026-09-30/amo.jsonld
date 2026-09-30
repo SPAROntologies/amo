@@ -1,0 +1,1955 @@
+[
+  {
+    "@id": "http://purl.org/spar/amo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/elements/1.1/contributor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/creator": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Fabio Vitali (https://orcid.org/0000-0002-7562-5203)"
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Silvio Peroni (https://orcid.org/0000-0003-0530-4305)"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/date": [
+      {
+        "@value": "2026-09-30"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/description": [
+      {
+        "@language": "en",
+        "@value": "\nThe **_Argument Model Ontology (AMO)_** is an OWL 2 DL ontology that aims to encode the [Toulmin's theory](https://doi.org/10.1017/CBO9780511840005) through OWL classes and properties, in order to describe a web of inter-linked entities that participate, with a specific role, in one or more arguments.\n\nToulmin's model of argument focuses on the justificatory function of argumentation: rather than evaluating arguments through formal logic, it describes how people, in practice, put forward a claim and then justify it. \nAccording to this model, every practical argument can be analysed in terms of six interrelated components. \nThree of them are essential: the claim to be established, the evidence (or data) on which it is founded, and the warrant that bridges from the evidence to the claim. \nThe other three may be omitted in some arguments: the backing that certifies the warrant, the qualifier that expresses the degree of certainty of the claim, and the rebuttal that states the conditions under which the claim would not hold.\n\n![The main architecture of AMO.](amo.png)\n\nAMO models an argument through the class `amo:Argument`, whose components are instances of `amo:Claim`, `amo:Evidence`, `amo:Warrant`, `amo:Backing` and `amo:Rebuttal`, all grouped under the class `amo:ArgumentationEntity`, and of `amo:Qualifier`. \nAn argument is linked to its components through the sub-properties of `amo:involves` (i.e., `amo:hasClaim`, `amo:hasEvidence`, `amo:hasWarrant`, `amo:hasBacking`, `amo:hasQualifier` and `amo:hasRebuttal`), and each argument must have exactly one claim and at least one evidence and one warrant. \nThe components are, in turn, linked to one another: an evidence proves a claim (`amo:proves`) and supports a warrant (`amo:supports`), a warrant leads to a claim (`amo:leadsTo`), a backing backs a warrant (`amo:backs`), a qualifier forces a claim (`amo:forces`), and a claim is valid unless a rebuttal holds (`amo:isValidUnless`). \nSeveral of these relations are automatically inferred, by means of property chains, from the description of the roles that the components hold within the argument.\n\n![How an argument is modelled using AMO.](argument.png)\n\nAMO is aligned with the [Citation Typing Ontology (CiTO)](http://purl.org/spar/cito), an ontology for the characterization of citations, both factually and rhetorically that forms part of [SPAR, a suite of Semantic Publishing and Referencing Ontologies](http://sparontologies.net).\n\n## Examples of use\n\nIn the following subsections, we introduce some examples to showcase how to use AMO. \n\nThe prefixes that are used in all the examples provided below are defined as follows:\n\n    @prefix amo: <http://purl.org/spar/amo/> .\n    @prefix : <http://example.org/> .\n\n### Describing the components of an argument\n\nConsider the argument \"This ontology was developed in OWL, and since an ontology developed in OWL is a consistent OWL ontology, as stated by the OWL 2 specifications, this is presumably a consistent OWL ontology, unless a reasoner for OWL 2 proves that it is not consistent\". \nThe argument can be described from a high-level perspective by stating which argumentation entities it involves and which role each of them holds.\n\n    :argument a amo:Argument ;\n        amo:hasClaim :consistency-claim ;\n        amo:hasEvidence :developed-in-owl ;\n        amo:hasWarrant :owl-warrant ;\n        amo:hasBacking :owl2-spec ;\n        amo:hasQualifier :presumably ;\n        amo:hasRebuttal :reasoner-rebuttal .\n\n    :consistency-claim a amo:Claim .\n    :developed-in-owl a amo:Evidence .\n    :owl-warrant a amo:Warrant .\n    :owl2-spec a amo:Backing .\n    :presumably a amo:Qualifier .\n    :reasoner-rebuttal a amo:Rebuttal .\n\n### Describing the relations between argumentation entities\n\nThe same argument can be described from a factual perspective, by stating how its argumentation entities are linked to one another. \nThe relations between evidence and claim, warrant and claim, qualifier and claim, and claim and rebuttal can also be inferred from the high-level description through the property chains defined in AMO.\n\n    :developed-in-owl amo:proves :consistency-claim ;\n        amo:supports :owl-warrant .\n\n    :owl-warrant amo:leadsTo :consistency-claim .\n\n    :owl2-spec amo:backs :owl-warrant .\n\n    :presumably amo:forces :consistency-claim .\n\n    :consistency-claim amo:isValidUnless :reasoner-rebuttal .\n\n## Competency Questions\n\nAMO can be used for answering several questions related to arguments and how argumentation entities are related to each other.\nIn the following subsections, some of them are introduced together with their respective SPARQL queries. \n\nThe prefixes that are used in all the SPARQL queries provided below are defined as follows:\n\n    PREFIX amo: <http://purl.org/spar/amo/>\n    PREFIX : <http://example.org/>\n    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\n### CQ1\n\nWhat is the claim of a given argument, and which evidence proves it?\n\n    SELECT ?claim ?evidence\n    WHERE {\n        :argument amo:hasClaim ?claim ;\n            amo:hasEvidence ?evidence .\n    }\n\n### CQ2\n\nWhich warrants lead to a given claim, and which backings attest them?\n\n    SELECT ?warrant ?backing\n    WHERE {\n        ?warrant amo:leadsTo :consistency-claim .\n        OPTIONAL { ?backing amo:backs ?warrant }\n    }\n\n### CQ3\n\nWhat is the degree of force of a given claim, and under which rebuttals is it not valid?\n\n    SELECT ?qualifier ?rebuttal\n    WHERE {\n        OPTIONAL { ?qualifier amo:forces :consistency-claim }\n        OPTIONAL { :consistency-claim amo:isValidUnless ?rebuttal }\n    }\n\n"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/title": [
+      {
+        "@language": "en",
+        "@value": "The Argument Model Ontology (AMO)"
+      }
+    ],
+    "http://purl.org/dc/terms/bibliographicCitation": [
+      {
+        "@value": "Peroni, S., Tomasi, F., Vitali, F., & Zingoni, J. (2013, January). Semantic lenses as exploration method for scholarly articles. In Italian Research Conference on Digital Libraries (pp. 118-129). Berlin, Heidelberg: Springer Berlin Heidelberg. DOI: https://doi.org/10.1007/978-3-642-54347-0_13."
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@value": "2011-05-04"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@value": "2011-05-04"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@value": "2026-09-30"
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@id": "https://ror.org/00wb4mk85"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://github.com/SPAROntologies/amo/blob/master/docs/cq.md"
+      }
+    ],
+    "http://purl.org/ontology/bibo/doi": [
+      {
+        "@value": "TBA"
+      }
+    ],
+    "http://purl.org/ontology/bibo/status": [
+      {
+        "@id": "http://purl.org/ontology/bibo/status/published"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@language": "en",
+        "@value": "amo"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@language": "en",
+        "@value": "http://purl.org/spar/amo"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Argument Model Ontology (AMO)"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#backwardCompatibleWith": [
+      {
+        "@id": "http://purl.org/spar/amo/2011-05-04"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://purl.org/spar/cito/"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#priorVersion": [
+      {
+        "@id": "http://purl.org/spar/amo/2011-05-04"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "http://purl.org/spar/amo/2026-09-30"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "1.0.1"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/logo": [
+      {
+        "@id": "https://github.com/SPAROntologies/amo/blob/master/spar.png"
+      }
+    ],
+    "https://schema.org/codeRepository": [
+      {
+        "@id": "https://github.com/SPAROntologies/amo"
+      }
+    ],
+    "https://schema.org/image": [
+      {
+        "@id": "https://github.com/SPAROntologies/amo/blob/master/docs/current/amo.png"
+      },
+      {
+        "@id": "https://github.com/SPAROntologies/amo/blob/master/docs/current/argument.png"
+      }
+    ],
+    "https://schema.org/includedInDataCatalog": [
+      {
+        "@id": "https://fairsharing.org/"
+      }
+    ],
+    "https://schema.org/keywords": [
+      {
+        "@language": "en",
+        "@value": "bibliometrics"
+      },
+      {
+        "@language": "en",
+        "@value": "argument model"
+      },
+      {
+        "@language": "en",
+        "@value": "scholarly publishing"
+      },
+      {
+        "@language": "en",
+        "@value": "scientometrics"
+      },
+      {
+        "@language": "en",
+        "@value": "semantic publishing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/relatesTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#SymmetricProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-evidence a amo:Evidence ;\n        amo:relatesTo :my-claim .\n\n    :my-claim a amo:Claim .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argumentation entity relates to another one in some way - for example, it is the evidence that is used to prove a claim of an argument."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b30"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "relates to"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/ArgumentationEntity"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b30",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/ArgumentationEntity"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/Qualifier"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/isRebuttalIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-rebuttal \n        amo:isRebuttalIn :my-argument .\n\n    :my-argument a amo:Argument .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argumentative entity linked to an argument in which it is considered a rebuttal."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is rebuttal in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/isInvolvedIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/amo/hasRebuttal"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/supports",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-evidence a amo:Evidence ;\n        amo:supports :my-warrant .\n\n    :my-warrant a amo:Warrant .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An evidence that supports a warrant of an argument."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Evidence"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "supports"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/Warrant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/relatesTo"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/givesSupportTo"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/hasEvidence",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-argument a amo:Argument ;\n        amo:hasEvidence :my-evidence .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argument includes an evidence as one of its (mandatory) components."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has evidence"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/Evidence"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/involves"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/forces",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-qualifier a amo:Qualifier ;\n        amo:forces :my-claim .\n\n    :my-claim a amo:Claim .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A qualifier that expresses as degree of force concerning a claim of an argument."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Qualifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "forces"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/Claim"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/relatesTo"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/qualifies"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/isQualifierIn"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/hasClaim"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "By means of the property chain defined, the assertion that links a qualifier to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/description",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/isBackingIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-backing \n        amo:isBackingIn :my-argument .\n\n    :my-argument a amo:Argument .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argumentative entity linked to an argument in which it is considered a backing."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is backing in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/isInvolvedIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/amo/hasBacking"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/isQualifierIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-qualifier \n        amo:isQualifierIn :my-argument .\n\n    :my-argument a amo:Argument .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An sentence or word linked to an argument with the scope of qualifying the argument claim."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is qualifier in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/isInvolvedIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/amo/hasQualifier"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/Warrant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-warrant a amo:Warrant ;\n        amo:isWarrantIn :my-argument ;\n        amo:leadsTo :my-claim .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A statement bridging from the evidence to the claim - e.g., 'An ontology developed in OWL is a consistent OWL ontology'.\n"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "warrant"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b22"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/ArgumentationEntity"
+          },
+          {
+            "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b23"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b23",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/amo/isWarrantIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/hasWarrant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-argument a amo:Argument ;\n        amo:hasWarrant :my-warrant .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argument includes a warrant as one of its (mandatory) components."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has warrant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/Warrant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/involves"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/involves",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-argument a amo:Argument ;\n        amo:involves :my-claim, \n            :my-evidence, \n            :my-warrant .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "involves"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b33"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "This property and its sub-properties serve to describe an argument from an high-level perspective (i.e., which argumentation entities take part in it and what role they hold) rather than from a factual point of view (i.e., how argumentation entities are inter-linked between them)."
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b33",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/ArgumentationEntity"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/Qualifier"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/date",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/hasBacking",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-argument a amo:Argument ;\n        amo:hasBacking :my-backing .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argument includes a backing as one of its (optional) components."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has backing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/Backing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/involves"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/creator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/Evidence",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-evidence a amo:Evidence ;\n        amo:isEvidenceIn :my-argument ;\n        amo:proves :my-claim .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "evidence"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b17"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b17",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/ArgumentationEntity"
+          },
+          {
+            "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b18"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b18",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/amo/isEvidenceIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#note",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/hasClaim",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#FunctionalProperty",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-argument a amo:Argument ;\n        amo:hasClaim :my-claim .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argument includes a claim as one of its (mandatory) components."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has claim"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/Claim"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/involves"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/isWarrantIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-warrant \n        amo:isWarrantIn :my-argument .\n\n    :my-argument a amo:Argument .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argumentative entity linked to an argument in which it is considered a warrant."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is warrant in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/isInvolvedIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/amo/hasWarrant"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b53",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointProperties"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/isBackingIn"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/isClaimIn"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/isEvidenceIn"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/isQualifierIn"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/isRebuttalIn"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/isWarrantIn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/Qualifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-qualifier a amo:Qualifier ;\n        amo:isQualifierIn :my-argument ;\n        amo:forces :my-claim .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "qualifier"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b21"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b21",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/amo/isQualifierIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/Argument",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-argument a amo:Argument ;\n        amo:hasClaim :my-claim ;\n        amo:hasEvidence :my-evidence ;\n        amo:hasWarrant :my-warrant ;\n        amo:hasBacking :my-backing ;\n        amo:hasQualifier :my-qualifier ;\n        amo:hasRebuttal :my-rebuttal .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "\nAn argument, or practical argument according to the 'Toulmin model of argument', focuses on the justificatory function of argumentation: practical arguments first find a claim of interest, and then provide justification for it.\n\nEach argument must be analyzed according to six interrelated components: claim, evidence, warrant, backing, rebuttal and qualifier. \nThe first three elements, 'claim', 'data' and 'warrant', are considered as the essential components of practical arguments, while the second triad, 'qualifier', 'backing', and 'rebuttal', may not be needed in some arguments.\n"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "argument"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b46"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b46",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b47"
+          },
+          {
+            "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b48"
+          },
+          {
+            "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b49"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b47",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/amo/hasEvidence"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b48",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/amo/hasWarrant"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b49",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/amo/hasClaim"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/backs",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-backing a amo:Backing ;\n        amo:backs :my-warrant .\n\n    :my-warrant a amo:Warrant .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A backing that attests the warrant of an argument."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Backing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "backs"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/Warrant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/relatesTo"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/givesBackgroundTo"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/isClaimIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-claim \n        amo:isClaimIn :my-argument .\n\n    :my-argument a amo:Argument .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argumentative entity linked to an argument in which it is considered a claim."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is claim in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/isInvolvedIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/amo/hasClaim"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/hasRebuttal",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-argument a amo:Argument ;\n        amo:hasRebuttal :my-rebuttal .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argument includes a rebuttal as one of its (optional) components."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has rebuttal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/Rebuttal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/involves"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/title",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/leadsTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-warrant a amo:Warrant ;\n        amo:leadsTo :my-claim .\n\n    :my-claim a amo:Claim ."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Warrant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "leads to"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/Claim"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/relatesTo"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/confirms"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/isWarrantIn"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/hasClaim"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "A warrant that points to a claim from the related evidence within an argument."
+      },
+      {
+        "@language": "en",
+        "@value": "By means of the property chain defined, the assertion that links a warrant to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/isInvolvedIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-claim \n        amo:isInvolvedIn :my-argument .\n\n    :my-argument a amo:Argument .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argumentation entity involved in the presentation of an argument."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is involved in"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/amo/involves"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/ArgumentationEntity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-claim a amo:ArgumentationEntity ;\n        amo:isInvolvedIn :my-argument .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An entity that takes part in an argument according to the 'Toulmin model of argument'."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "argumentation entity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b36"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b36",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b37"
+          },
+          {
+            "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b43"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b37",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/Backing"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/Claim"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/Evidence"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/Rebuttal"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/Warrant"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b43",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/amo/isInvolvedIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/Rebuttal",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-rebuttal a amo:Rebuttal ;\n        amo:isRebuttalIn :my-argument .\n\n    :my-claim \n        amo:isValidUnless :my-rebuttal .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "rebuttal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b13"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b13",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/ArgumentationEntity"
+          },
+          {
+            "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b14",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/amo/isRebuttalIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/rights",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/isEvidenceIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-evidence \n        amo:isEvidenceIn :my-argument .\n\n    :my-argument a amo:Argument .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argumentative entity linked to an argument in which it is considered an evidence."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is evidence in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/isInvolvedIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/amo/hasEvidence"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/proves",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-evidence a amo:Evidence ;\n        amo:proves :my-claim .\n\n    :my-claim a amo:Claim .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An evidence that founds a claim of an argument."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Evidence"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "proves"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/Claim"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/relatesTo"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isCitedAsEvidenceBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/isEvidenceIn"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/hasClaim"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "By means of the property chain defined, the assertion that links an evidence to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/Claim",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-claim a amo:Claim ;\n        amo:isClaimIn :my-argument ;\n        amo:isValidUnless :my-rebuttal .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A fact that must be established - e.g., 'This is a consistent OWL ontology'."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "claim"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b26"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b26",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/ArgumentationEntity"
+          },
+          {
+            "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b27"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b27",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/amo/isClaimIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/isValidUnless",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-claim a amo:Claim ;\n        amo:isValidUnless :my-rebuttal .\n\n    :my-rebuttal a amo:Rebuttal .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A claim that is restricted by a rebuttal of an argument."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Claim"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is valid unless"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/Rebuttal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/relatesTo"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isDisputedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/isClaimIn"
+          },
+          {
+            "@id": "http://purl.org/spar/amo/hasRebuttal"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "By means of the property chain defined, the assertion that links a claim to the relative rebuttal is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/Backing",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-backing a amo:Backing ;\n        amo:isBackingIn :my-argument ;\n        amo:backs :my-warrant .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "backing"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b9"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/amo/ArgumentationEntity"
+          },
+          {
+            "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n1a0a3a68be7f463a92e2a2d38d5834b0b10",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/amo/isBackingIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/amo/hasQualifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#FunctionalProperty",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-argument a amo:Argument ;\n        amo:hasQualifier :my-qualifier .\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An argument includes a qualifier as one of its (optional) components."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/amo/Argument"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/amo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has qualifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/spar/amo/Qualifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/spar/amo/involves"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+amo:Argument a owl:Class ;
+    rdfs:label "argument"@en ;
+    vann:example """
+    :my-argument a amo:Argument ;
+        amo:hasClaim :my-claim ;
+        amo:hasEvidence :my-evidence ;
+        amo:hasWarrant :my-warrant ;
+        amo:hasBacking :my-backing ;
+        amo:hasQualifier :my-qualifier ;
+        amo:hasRebuttal :my-rebuttal .
+    """ ;
+    rdfs:comment """
+An argument, or practical argument according to the 'Toulmin model of argument', focuses on the justificatory function of argumentation: practical arguments first find a claim of interest, and then provide justification for it.
+
+Each argument must be analyzed according to six interrelated components: claim, evidence, warrant, backing, rebuttal and qualifier. 
+The first three elements, 'claim', 'data' and 'warrant', are considered as the essential components of practical arguments, while the second triad, 'qualifier', 'backing', and 'rebuttal', may not be needed in some arguments.
+"""@en ;
+    rdfs:isDefinedBy amo: ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty amo:hasEvidence ] [ a owl:Restriction ;
+                        owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty amo:hasWarrant ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty amo:hasClaim ] ) ] ;
+    vs:term_status reg:statusStable .
+

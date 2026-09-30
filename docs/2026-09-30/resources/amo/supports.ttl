@@ -1,0 +1,24 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:supports a owl:ObjectProperty ;
+    rdfs:label "supports"@en ;
+    vann:example """
+    :my-evidence a amo:Evidence ;
+        amo:supports :my-warrant .
+
+    :my-warrant a amo:Warrant .
+    """ ;
+    rdfs:comment "An evidence that supports a warrant of an argument."@en ;
+    rdfs:domain amo:Evidence ;
+    rdfs:isDefinedBy amo: ;
+    rdfs:range amo:Warrant ;
+    rdfs:subPropertyOf amo:relatesTo,
+        cito:givesSupportTo ;
+    vs:term_status reg:statusStable .
+
