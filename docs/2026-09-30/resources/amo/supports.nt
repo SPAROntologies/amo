@@ -1,0 +1,10 @@
+<http://purl.org/spar/amo/supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/givesSupportTo> .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#label> "supports"@en .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#comment> "An evidence that supports a warrant of an argument."@en .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Warrant> .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Evidence> .
+<http://purl.org/spar/amo/supports> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:supports :my-warrant .\n\n    :my-warrant a amo:Warrant .\n    " .

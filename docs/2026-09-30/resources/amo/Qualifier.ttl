@@ -1,0 +1,21 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:Qualifier a owl:Class ;
+    rdfs:label "qualifier"@en ;
+    vann:example """
+    :my-qualifier a amo:Qualifier ;
+        amo:isQualifierIn :my-argument ;
+        amo:forces :my-claim .
+    """ ;
+    rdfs:comment "Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc."@en ;
+    rdfs:isDefinedBy amo: ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty amo:isQualifierIn ;
+            owl:someValuesFrom amo:Argument ] ;
+    vs:term_status reg:statusStable .
+

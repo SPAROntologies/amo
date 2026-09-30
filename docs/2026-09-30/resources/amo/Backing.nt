@@ -1,0 +1,16 @@
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isBackingIn> .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/Backing> <http://purl.org/vocab/vann/example> "\n    :my-backing a amo:Backing ;\n        amo:isBackingIn :my-argument ;\n        amo:backs :my-warrant .\n    " .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b9 <http://www.w3.org/2002/07/owl#intersectionOf> _:n1a0a3a68be7f463a92e2a2d38d5834b0b11 .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2002/07/owl#equivalentClass> _:n1a0a3a68be7f463a92e2a2d38d5834b0b9 .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#comment> "Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications."@en .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#label> "backing"@en .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n1a0a3a68be7f463a92e2a2d38d5834b0b10 .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n1a0a3a68be7f463a92e2a2d38d5834b0b12 .

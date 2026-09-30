@@ -1,0 +1,27 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:leadsTo a owl:ObjectProperty ;
+    rdfs:label "leads to"@en ;
+    vann:example """
+    :my-warrant a amo:Warrant ;
+        amo:leadsTo :my-claim .
+
+    :my-claim a amo:Claim .""" ;
+    rdfs:domain amo:Warrant ;
+    rdfs:isDefinedBy amo: ;
+    rdfs:range amo:Claim ;
+    rdfs:subPropertyOf amo:relatesTo,
+        cito:confirms ;
+    owl:propertyChainAxiom ( amo:isWarrantIn amo:hasClaim ) ;
+    vs:term_status reg:statusStable ;
+    skos:note "A warrant that points to a claim from the related evidence within an argument."@en,
+        "By means of the property chain defined, the assertion that links a warrant to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .
+

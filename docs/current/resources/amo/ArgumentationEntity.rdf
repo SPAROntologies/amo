@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/ArgumentationEntity">
+    <rdfs:comment xml:lang="en">An entity that takes part in an argument according to the 'Toulmin model of argument'.</rdfs:comment>
+    <vann:example>
+    :my-claim a amo:ArgumentationEntity ;
+        amo:isInvolvedIn :my-argument .
+    </vann:example>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b36"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">argumentation entity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b42">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Warrant"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b41">
+    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b42"/>
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Rebuttal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b38">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Backing"/>
+    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b39"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b36">
+    <owl:intersectionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b44"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b45">
+    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b43"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b37">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b38"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b40">
+    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b41"/>
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Evidence"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b44">
+    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b45"/>
+    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b37"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b39">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Claim"/>
+    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b40"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b43">
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
+  </rdf:Description>
+</rdf:RDF>

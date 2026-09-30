@@ -1,0 +1,15 @@
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n1a0a3a68be7f463a92e2a2d38d5834b0b32 .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/relatesTo> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:relatesTo :my-claim .\n\n    :my-claim a amo:Claim .\n    " .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#label> "relates to"@en .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentation entity relates to another one in some way - for example, it is the evidence that is used to prove a claim of an argument."@en .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Qualifier> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b30 <http://www.w3.org/2002/07/owl#unionOf> _:n1a0a3a68be7f463a92e2a2d38d5834b0b31 .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/ArgumentationEntity> .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:n1a0a3a68be7f463a92e2a2d38d5834b0b30 .

@@ -1,0 +1,9 @@
+<http://purl.org/spar/amo/hasWarrant> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasWarrant :my-warrant .\n    " .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#label> "has warrant"@en .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Warrant> .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument includes a warrant as one of its (mandatory) components."@en .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .

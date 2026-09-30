@@ -1,0 +1,25 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:isRebuttalIn a owl:ObjectProperty ;
+    rdfs:label "is rebuttal in"@en ;
+    vann:example """
+    :my-rebuttal 
+        amo:isRebuttalIn :my-argument .
+
+    :my-argument a amo:Argument .
+    """ ;
+    rdfs:comment "An argumentative entity linked to an argument in which it is considered a rebuttal."@en ;
+    rdfs:isDefinedBy amo: ;
+    rdfs:subPropertyOf amo:isInvolvedIn ;
+    owl:inverseOf amo:hasRebuttal ;
+    vs:term_status reg:statusStable .
+
+[] a owl:AllDisjointProperties ;
+    owl:members ( amo:isBackingIn amo:isClaimIn amo:isEvidenceIn amo:isQualifierIn amo:isRebuttalIn amo:isWarrantIn ) .
+

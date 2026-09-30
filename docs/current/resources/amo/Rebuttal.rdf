@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b15">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
+    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b13">
+    <owl:intersectionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b15"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/Rebuttal">
+    <vann:example>
+    :my-rebuttal a amo:Rebuttal ;
+        amo:isRebuttalIn :my-argument .
+
+    :my-claim 
+        amo:isValidUnless :my-rebuttal .
+    </vann:example>
+    <rdfs:comment xml:lang="en">Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'.</rdfs:comment>
+    <owl:equivalentClass rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b13"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">rebuttal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b14">
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isRebuttalIn"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b16">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b14"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,21 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:hasClaim a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has claim"@en ;
+    vann:example """
+    :my-argument a amo:Argument ;
+        amo:hasClaim :my-claim .
+    """ ;
+    rdfs:comment "An argument includes a claim as one of its (mandatory) components."@en ;
+    rdfs:domain amo:Argument ;
+    rdfs:isDefinedBy amo: ;
+    rdfs:range amo:Claim ;
+    rdfs:subPropertyOf amo:involves ;
+    vs:term_status reg:statusStable .
+

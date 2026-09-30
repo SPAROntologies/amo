@@ -1,0 +1,24 @@
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b48 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/hasWarrant> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b47 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n1a0a3a68be7f463a92e2a2d38d5834b0b51 .
+<http://purl.org/spar/amo/Argument> <http://www.w3.org/2000/01/rdf-schema#label> "argument"@en .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n1a0a3a68be7f463a92e2a2d38d5834b0b47 .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n1a0a3a68be7f463a92e2a2d38d5834b0b49 .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n1a0a3a68be7f463a92e2a2d38d5834b0b52 .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b49 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/hasClaim> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b49 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b48 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b47 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/hasEvidence> .
+<http://purl.org/spar/amo/Argument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b46 <http://www.w3.org/2002/07/owl#intersectionOf> _:n1a0a3a68be7f463a92e2a2d38d5834b0b50 .
+<http://purl.org/spar/amo/Argument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n1a0a3a68be7f463a92e2a2d38d5834b0b48 .
+<http://purl.org/spar/amo/Argument> <http://www.w3.org/2000/01/rdf-schema#comment> "\nAn argument, or practical argument according to the 'Toulmin model of argument', focuses on the justificatory function of argumentation: practical arguments first find a claim of interest, and then provide justification for it.\n\nEach argument must be analyzed according to six interrelated components: claim, evidence, warrant, backing, rebuttal and qualifier. \nThe first three elements, 'claim', 'data' and 'warrant', are considered as the essential components of practical arguments, while the second triad, 'qualifier', 'backing', and 'rebuttal', may not be needed in some arguments.\n"@en .
+_:n1a0a3a68be7f463a92e2a2d38d5834b0b52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/Argument> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/Argument> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasClaim :my-claim ;\n        amo:hasEvidence :my-evidence ;\n        amo:hasWarrant :my-warrant ;\n        amo:hasBacking :my-backing ;\n        amo:hasQualifier :my-qualifier ;\n        amo:hasRebuttal :my-rebuttal .\n    " .
+<http://purl.org/spar/amo/Argument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n1a0a3a68be7f463a92e2a2d38d5834b0b46 .

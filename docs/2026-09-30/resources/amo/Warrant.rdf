@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b23">
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isWarrantIn"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/Warrant">
+    <owl:equivalentClass rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b22"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vann:example>
+    :my-warrant a amo:Warrant ;
+        amo:isWarrantIn :my-argument ;
+        amo:leadsTo :my-claim .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A statement bridging from the evidence to the claim - e.g., 'An ontology developed in OWL is a consistent OWL ontology'.
+</rdfs:comment>
+    <rdfs:label xml:lang="en">warrant</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b24">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
+    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b25"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b25">
+    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b23"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>
