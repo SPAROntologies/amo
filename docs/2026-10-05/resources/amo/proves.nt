@@ -1,0 +1,16 @@
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Evidence> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#comment> "An evidence that founds a claim of an argument."@en .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedAsEvidenceBy> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#label> "proves"@en .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:nac206eba9ad849d79fa50974ed88d668b7 .
+_:nac206eba9ad849d79fa50974ed88d668b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b8 .
+<http://purl.org/spar/amo/proves> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:proves :my-claim .\n\n    :my-claim a amo:Claim .\n    " .
+_:nac206eba9ad849d79fa50974ed88d668b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Claim> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:nac206eba9ad849d79fa50974ed88d668b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isEvidenceIn> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2004/02/skos/core#note> "By means of the property chain defined, the assertion that links an evidence to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
+_:nac206eba9ad849d79fa50974ed88d668b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/hasClaim> .

@@ -1,0 +1,21 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:hasQualifier a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has qualifier"@en ;
+    vann:example """
+    :my-argument a amo:Argument ;
+        amo:hasQualifier :my-qualifier .
+    """ ;
+    rdfs:comment "An argument includes a qualifier as one of its (optional) components."@en ;
+    rdfs:domain amo:Argument ;
+    rdfs:isDefinedBy amo: ;
+    rdfs:range amo:Qualifier ;
+    rdfs:subPropertyOf amo:involves ;
+    vs:term_status reg:statusStable .
+

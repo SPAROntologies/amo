@@ -1,0 +1,16 @@
+_:nac206eba9ad849d79fa50974ed88d668b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b29 .
+_:nac206eba9ad849d79fa50974ed88d668b26 <http://www.w3.org/2002/07/owl#intersectionOf> _:nac206eba9ad849d79fa50974ed88d668b28 .
+<http://purl.org/spar/amo/Claim> <http://www.w3.org/2000/01/rdf-schema#comment> "A fact that must be established - e.g., 'This is a consistent OWL ontology'."@en .
+_:nac206eba9ad849d79fa50974ed88d668b29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/Claim> <http://www.w3.org/2002/07/owl#equivalentClass> _:nac206eba9ad849d79fa50974ed88d668b26 .
+_:nac206eba9ad849d79fa50974ed88d668b27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/Claim> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:nac206eba9ad849d79fa50974ed88d668b27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:nac206eba9ad849d79fa50974ed88d668b27 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isClaimIn> .
+_:nac206eba9ad849d79fa50974ed88d668b29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b27 .
+<http://purl.org/spar/amo/Claim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/Claim> <http://www.w3.org/2000/01/rdf-schema#label> "claim"@en .
+_:nac206eba9ad849d79fa50974ed88d668b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+<http://purl.org/spar/amo/Claim> <http://purl.org/vocab/vann/example> "\n    :my-claim a amo:Claim ;\n        amo:isClaimIn :my-argument ;\n        amo:isValidUnless :my-rebuttal .\n    " .
+<http://purl.org/spar/amo/Claim> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:nac206eba9ad849d79fa50974ed88d668b26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

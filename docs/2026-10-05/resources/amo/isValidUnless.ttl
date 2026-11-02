@@ -1,0 +1,28 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:isValidUnless a owl:ObjectProperty ;
+    rdfs:label "is valid unless"@en ;
+    vann:example """
+    :my-claim a amo:Claim ;
+        amo:isValidUnless :my-rebuttal .
+
+    :my-rebuttal a amo:Rebuttal .
+    """ ;
+    rdfs:comment "A claim that is restricted by a rebuttal of an argument."@en ;
+    rdfs:domain amo:Claim ;
+    rdfs:isDefinedBy amo: ;
+    rdfs:range amo:Rebuttal ;
+    rdfs:subPropertyOf amo:relatesTo,
+        cito:isDisputedBy ;
+    owl:propertyChainAxiom ( amo:isClaimIn amo:hasRebuttal ) ;
+    vs:term_status reg:statusStable ;
+    skos:note "By means of the property chain defined, the assertion that links a claim to the relative rebuttal is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .
+

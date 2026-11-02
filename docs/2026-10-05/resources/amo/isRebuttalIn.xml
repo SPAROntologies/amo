@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b58">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isRebuttalIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b59"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/isRebuttalIn">
+    <vann:example>
+    :my-rebuttal 
+        amo:isRebuttalIn :my-argument .
+
+    :my-argument a amo:Argument .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered a rebuttal.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasRebuttal"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">is rebuttal in</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b57">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isQualifierIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b58"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b53">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+    <owl:members rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b54">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isBackingIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b55"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b55">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isClaimIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b56"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b59">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isWarrantIn"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b56">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isEvidenceIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b57"/>
+  </rdf:Description>
+</rdf:RDF>

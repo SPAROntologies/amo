@@ -1,0 +1,25 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:involves a owl:ObjectProperty ;
+    rdfs:label "involves"@en ;
+    vann:example """
+    :my-argument a amo:Argument ;
+        amo:involves :my-claim, 
+            :my-evidence, 
+            :my-warrant .
+    """ ;
+    rdfs:comment "An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier."@en ;
+    rdfs:domain amo:Argument ;
+    rdfs:isDefinedBy amo: ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( amo:ArgumentationEntity amo:Qualifier ) ] ;
+    vs:term_status reg:statusStable ;
+    skos:note "This property and its sub-properties serve to describe an argument from an high-level perspective (i.e., which argumentation entities take part in it and what role they hold) rather than from a factual point of view (i.e., how argumentation entities are inter-linked between them)."@en .
+

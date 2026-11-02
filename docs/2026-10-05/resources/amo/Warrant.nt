@@ -1,0 +1,16 @@
+_:nac206eba9ad849d79fa50974ed88d668b23 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isWarrantIn> .
+_:nac206eba9ad849d79fa50974ed88d668b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/amo/Warrant> <http://purl.org/vocab/vann/example> "\n    :my-warrant a amo:Warrant ;\n        amo:isWarrantIn :my-argument ;\n        amo:leadsTo :my-claim .\n    " .
+_:nac206eba9ad849d79fa50974ed88d668b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b23 .
+<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2000/01/rdf-schema#comment> "A statement bridging from the evidence to the claim - e.g., 'An ontology developed in OWL is a consistent OWL ontology'.\n"@en .
+_:nac206eba9ad849d79fa50974ed88d668b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+_:nac206eba9ad849d79fa50974ed88d668b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:nac206eba9ad849d79fa50974ed88d668b22 <http://www.w3.org/2002/07/owl#intersectionOf> _:nac206eba9ad849d79fa50974ed88d668b24 .
+<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:nac206eba9ad849d79fa50974ed88d668b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b25 .
+_:nac206eba9ad849d79fa50974ed88d668b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2002/07/owl#equivalentClass> _:nac206eba9ad849d79fa50974ed88d668b22 .
+_:nac206eba9ad849d79fa50974ed88d668b23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2000/01/rdf-schema#label> "warrant"@en .
+<http://purl.org/spar/amo/Warrant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .

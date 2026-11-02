@@ -1,0 +1,23 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:ArgumentationEntity a owl:Class ;
+    rdfs:label "argumentation entity"@en ;
+    vann:example """
+    :my-claim a amo:ArgumentationEntity ;
+        amo:isInvolvedIn :my-argument .
+    """ ;
+    rdfs:comment "An entity that takes part in an argument according to the 'Toulmin model of argument'."@en ;
+    rdfs:isDefinedBy amo: ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Class ;
+                        owl:unionOf ( amo:Backing amo:Claim amo:Evidence amo:Rebuttal amo:Warrant ) ] [ a owl:Restriction ;
+                        owl:onProperty amo:isInvolvedIn ;
+                        owl:someValuesFrom amo:Argument ] ) ] ;
+    vs:term_status reg:statusStable .
+

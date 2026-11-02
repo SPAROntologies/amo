@@ -1,0 +1,23 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:Backing a owl:Class ;
+    rdfs:label "backing"@en ;
+    vann:example """
+    :my-backing a amo:Backing ;
+        amo:isBackingIn :my-argument ;
+        amo:backs :my-warrant .
+    """ ;
+    rdfs:comment "Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications."@en ;
+    rdfs:isDefinedBy amo: ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( amo:ArgumentationEntity [ a owl:Restriction ;
+                        owl:onProperty amo:isBackingIn ;
+                        owl:someValuesFrom amo:Argument ] ) ] ;
+    vs:term_status reg:statusStable .
+
