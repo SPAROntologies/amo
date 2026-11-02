@@ -1,11 +1,7 @@
 [project]
 name = "amo"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.2"
+description = "The Argument Model Ontology (AMO) is an OWL 2 DL ontology that aims to encode the Toulmin's theory through OWL classes and properties, in order to describe a web of inter-linked entities that participate, with a specific role, in one or more arguments."
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "codespell>=2.4.3",
-    "rdflib>=7.6.0",
-    "requests>=2.34.2",
-]
+dependencies = []
