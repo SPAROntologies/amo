@@ -1,16 +1,16 @@
-<http://purl.org/spar/amo/Backing> <http://purl.org/vocab/vann/example> "\n    :my-backing a amo:Backing ;\n        amo:isBackingIn :my-argument ;\n        amo:backs :my-warrant .\n    " .
-_:nac206eba9ad849d79fa50974ed88d668b10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isBackingIn> .
 <http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#label> "backing"@en .
-_:nac206eba9ad849d79fa50974ed88d668b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
-<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#comment> "Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications."@en .
-_:nac206eba9ad849d79fa50974ed88d668b10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
-<http://purl.org/spar/amo/Backing> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/Backing> <http://www.w3.org/2002/07/owl#equivalentClass> _:nac206eba9ad849d79fa50974ed88d668b9 .
-_:nac206eba9ad849d79fa50974ed88d668b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b10 .
-_:nac206eba9ad849d79fa50974ed88d668b9 <http://www.w3.org/2002/07/owl#intersectionOf> _:nac206eba9ad849d79fa50974ed88d668b11 .
-<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b12 .
-_:nac206eba9ad849d79fa50974ed88d668b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:nac206eba9ad849d79fa50974ed88d668b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:nac206eba9ad849d79fa50974ed88d668b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://purl.org/spar/amo/Backing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isBackingIn> .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2002/07/owl#equivalentClass> _:n6fa01680b72a4431a70accdf2b2ea716b9 .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n6fa01680b72a4431a70accdf2b2ea716b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+_:n6fa01680b72a4431a70accdf2b2ea716b10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+_:n6fa01680b72a4431a70accdf2b2ea716b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b12 .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#comment> "Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications."@en .
+<http://purl.org/spar/amo/Backing> <http://purl.org/vocab/vann/example> "\n    :my-backing a amo:Backing ;\n        amo:isBackingIn :my-argument ;\n        amo:backs :my-warrant .\n    " .
+_:n6fa01680b72a4431a70accdf2b2ea716b9 <http://www.w3.org/2002/07/owl#intersectionOf> _:n6fa01680b72a4431a70accdf2b2ea716b11 .
+_:n6fa01680b72a4431a70accdf2b2ea716b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n6fa01680b72a4431a70accdf2b2ea716b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b10 .

@@ -1,15 +1,15 @@
-_:nac206eba9ad849d79fa50974ed88d668b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b35 .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#label> "involves"@en .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo/involves> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:involves :my-claim, \n            :my-evidence, \n            :my-warrant .\n    " .
-_:nac206eba9ad849d79fa50974ed88d668b33 <http://www.w3.org/2002/07/owl#unionOf> _:nac206eba9ad849d79fa50974ed88d668b34 .
-_:nac206eba9ad849d79fa50974ed88d668b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
-_:nac206eba9ad849d79fa50974ed88d668b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier."@en .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2004/02/skos/core#note> "This property and its sub-properties serve to describe an argument from an high-level perspective (i.e., which argumentation entities take part in it and what role they hold) rather than from a factual point of view (i.e., how argumentation entities are inter-linked between them)."@en .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#range> _:nac206eba9ad849d79fa50974ed88d668b33 .
-_:nac206eba9ad849d79fa50974ed88d668b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Qualifier> .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n6fa01680b72a4431a70accdf2b2ea716b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b35 .
+_:n6fa01680b72a4431a70accdf2b2ea716b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Qualifier> .
 <http://purl.org/spar/amo/involves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b33 <http://www.w3.org/2002/07/owl#unionOf> _:n6fa01680b72a4431a70accdf2b2ea716b34 .
+<http://purl.org/spar/amo/involves> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:involves :my-claim, \n            :my-evidence, \n            :my-warrant .\n    " .
+_:n6fa01680b72a4431a70accdf2b2ea716b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#range> _:n6fa01680b72a4431a70accdf2b2ea716b33 .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2004/02/skos/core#note> "This property and its sub-properties serve to describe an argument from an high-level perspective (i.e., which argumentation entities take part in it and what role they hold) rather than from a factual point of view (i.e., how argumentation entities are inter-linked between them)."@en .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#label> "involves"@en .

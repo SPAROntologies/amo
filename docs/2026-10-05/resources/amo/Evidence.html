@@ -136,20 +136,20 @@ What is the degree of force of a given claim, and under which rebuttals is it no
     """ ;
         rdfs:comment "A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'."@en ;
         rdfs:isDefinedBy amo: ;
-        owl:equivalentClass _:nac206eba9ad849d79fa50974ed88d668b17 ;
+        owl:equivalentClass _:n6fa01680b72a4431a70accdf2b2ea716b17 ;
         vs:term_status reg:statusStable .
 
-    _:nac206eba9ad849d79fa50974ed88d668b17 a owl:Class ;
-        owl:intersectionOf _:nac206eba9ad849d79fa50974ed88d668b19 .
+    _:n6fa01680b72a4431a70accdf2b2ea716b17 a owl:Class ;
+        owl:intersectionOf _:n6fa01680b72a4431a70accdf2b2ea716b19 .
 
-    _:nac206eba9ad849d79fa50974ed88d668b18 a owl:Restriction ;
+    _:n6fa01680b72a4431a70accdf2b2ea716b18 a owl:Restriction ;
         owl:onProperty amo:isEvidenceIn ;
         owl:someValuesFrom amo:Argument .
 
-    _:nac206eba9ad849d79fa50974ed88d668b19 rdf:first amo:ArgumentationEntity ;
-        rdf:rest _:nac206eba9ad849d79fa50974ed88d668b20 .
+    _:n6fa01680b72a4431a70accdf2b2ea716b19 rdf:first amo:ArgumentationEntity ;
+        rdf:rest _:n6fa01680b72a4431a70accdf2b2ea716b20 .
 
-    _:nac206eba9ad849d79fa50974ed88d668b20 rdf:first _:nac206eba9ad849d79fa50974ed88d668b18 ;
+    _:n6fa01680b72a4431a70accdf2b2ea716b20 rdf:first _:n6fa01680b72a4431a70accdf2b2ea716b18 ;
         rdf:rest () .
 }
 
@@ -185,7 +185,7 @@ What is the degree of force of a given claim, and under which rebuttals is it no
         ],
         "http://www.w3.org/2002/07/owl#equivalentClass": [
           {
-            "@id": "_:nac206eba9ad849d79fa50974ed88d668b17"
+            "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b17"
           }
         ],
         "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -195,7 +195,7 @@ What is the degree of force of a given claim, and under which rebuttals is it no
         ]
       },
       {
-        "@id": "_:nac206eba9ad849d79fa50974ed88d668b17",
+        "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b17",
         "@type": [
           "http://www.w3.org/2002/07/owl#Class"
         ],
@@ -206,14 +206,14 @@ What is the degree of force of a given claim, and under which rebuttals is it no
                 "@id": "http://purl.org/spar/amo/ArgumentationEntity"
               },
               {
-                "@id": "_:nac206eba9ad849d79fa50974ed88d668b18"
+                "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b18"
               }
             ]
           }
         ]
       },
       {
-        "@id": "_:nac206eba9ad849d79fa50974ed88d668b18",
+        "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b18",
         "@type": [
           "http://www.w3.org/2002/07/owl#Restriction"
         ],
@@ -231,22 +231,22 @@ What is the degree of force of a given claim, and under which rebuttals is it no
     ],
     "@id": "http://purl.org/spar/amo"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_29cbb8c210cf39de96dee2f847c8b685_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>_:nac206eba9ad849d79fa50974ed88d668b18 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/amo> .
-_:nac206eba9ad849d79fa50974ed88d668b20 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> &lt;http://purl.org/spar/amo> .
-_:nac206eba9ad849d79fa50974ed88d668b20 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b18 &lt;http://purl.org/spar/amo> .
-_:nac206eba9ad849d79fa50974ed88d668b19 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b20 &lt;http://purl.org/spar/amo> .
+]</code></pre></div><div class="tab-pane fade" id=id_29cbb8c210cf39de96dee2f847c8b685_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>_:n6fa01680b72a4431a70accdf2b2ea716b18 &lt;http://www.w3.org/2002/07/owl#someValuesFrom> &lt;http://purl.org/spar/amo/Argument> &lt;http://purl.org/spar/amo> .
+_:n6fa01680b72a4431a70accdf2b2ea716b20 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> &lt;http://purl.org/spar/amo> .
 &lt;http://purl.org/spar/amo/Evidence> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/amo/> &lt;http://purl.org/spar/amo> .
-&lt;http://purl.org/spar/amo/Evidence> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/amo> .
-&lt;http://purl.org/spar/amo/Evidence> &lt;http://www.w3.org/2002/07/owl#equivalentClass> _:nac206eba9ad849d79fa50974ed88d668b17 &lt;http://purl.org/spar/amo> .
-_:nac206eba9ad849d79fa50974ed88d668b17 &lt;http://www.w3.org/2002/07/owl#intersectionOf> _:nac206eba9ad849d79fa50974ed88d668b19 &lt;http://purl.org/spar/amo> .
-&lt;http://purl.org/spar/amo/Evidence> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/amo> .
+_:n6fa01680b72a4431a70accdf2b2ea716b19 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b20 &lt;http://purl.org/spar/amo> .
+_:n6fa01680b72a4431a70accdf2b2ea716b18 &lt;http://www.w3.org/2002/07/owl#onProperty> &lt;http://purl.org/spar/amo/isEvidenceIn> &lt;http://purl.org/spar/amo> .
 &lt;http://purl.org/spar/amo/Evidence> &lt;http://www.w3.org/2000/01/rdf-schema#label> "evidence"@en &lt;http://purl.org/spar/amo> .
-_:nac206eba9ad849d79fa50974ed88d668b18 &lt;http://www.w3.org/2002/07/owl#someValuesFrom> &lt;http://purl.org/spar/amo/Argument> &lt;http://purl.org/spar/amo> .
-_:nac206eba9ad849d79fa50974ed88d668b19 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/amo/ArgumentationEntity> &lt;http://purl.org/spar/amo> .
-_:nac206eba9ad849d79fa50974ed88d668b18 &lt;http://www.w3.org/2002/07/owl#onProperty> &lt;http://purl.org/spar/amo/isEvidenceIn> &lt;http://purl.org/spar/amo> .
-_:nac206eba9ad849d79fa50974ed88d668b17 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/amo> .
 &lt;http://purl.org/spar/amo/Evidence> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'."@en &lt;http://purl.org/spar/amo> .
 &lt;http://purl.org/spar/amo/Evidence> &lt;http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:isEvidenceIn :my-argument ;\n        amo:proves :my-claim .\n    " &lt;http://purl.org/spar/amo> .
+_:n6fa01680b72a4431a70accdf2b2ea716b17 &lt;http://www.w3.org/2002/07/owl#intersectionOf> _:n6fa01680b72a4431a70accdf2b2ea716b19 &lt;http://purl.org/spar/amo> .
+_:n6fa01680b72a4431a70accdf2b2ea716b18 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/amo> .
+_:n6fa01680b72a4431a70accdf2b2ea716b20 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b18 &lt;http://purl.org/spar/amo> .
+_:n6fa01680b72a4431a70accdf2b2ea716b19 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/amo/ArgumentationEntity> &lt;http://purl.org/spar/amo> .
+&lt;http://purl.org/spar/amo/Evidence> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/amo> .
+&lt;http://purl.org/spar/amo/Evidence> &lt;http://www.w3.org/2002/07/owl#equivalentClass> _:n6fa01680b72a4431a70accdf2b2ea716b17 &lt;http://purl.org/spar/amo> .
+&lt;http://purl.org/spar/amo/Evidence> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/amo> .
+_:n6fa01680b72a4431a70accdf2b2ea716b17 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/amo> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../amo.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 

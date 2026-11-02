@@ -1,28 +1,28 @@
-<http://purl.org/spar/amo/ArgumentationEntity> <http://purl.org/vocab/vann/example> "\n    :my-claim a amo:ArgumentationEntity ;\n        amo:isInvolvedIn :my-argument .\n    " .
-_:nac206eba9ad849d79fa50974ed88d668b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b42 .
+_:n6fa01680b72a4431a70accdf2b2ea716b36 <http://www.w3.org/2002/07/owl#intersectionOf> _:n6fa01680b72a4431a70accdf2b2ea716b44 .
+_:n6fa01680b72a4431a70accdf2b2ea716b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Warrant> .
 <http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2000/01/rdf-schema#label> "argumentation entity"@en .
-_:nac206eba9ad849d79fa50974ed88d668b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Evidence> .
-<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that takes part in an argument according to the 'Toulmin model of argument'."@en .
-_:nac206eba9ad849d79fa50974ed88d668b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Claim> .
-_:nac206eba9ad849d79fa50974ed88d668b36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:nac206eba9ad849d79fa50974ed88d668b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b37 .
-_:nac206eba9ad849d79fa50974ed88d668b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b45 .
-<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-_:nac206eba9ad849d79fa50974ed88d668b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Backing> .
-_:nac206eba9ad849d79fa50974ed88d668b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:nac206eba9ad849d79fa50974ed88d668b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:nac206eba9ad849d79fa50974ed88d668b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Warrant> .
-_:nac206eba9ad849d79fa50974ed88d668b37 <http://www.w3.org/2002/07/owl#unionOf> _:nac206eba9ad849d79fa50974ed88d668b38 .
+_:n6fa01680b72a4431a70accdf2b2ea716b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b41 .
+_:n6fa01680b72a4431a70accdf2b2ea716b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b43 .
+_:n6fa01680b72a4431a70accdf2b2ea716b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b37 .
+_:n6fa01680b72a4431a70accdf2b2ea716b37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/ArgumentationEntity> <http://purl.org/vocab/vann/example> "\n    :my-claim a amo:ArgumentationEntity ;\n        amo:isInvolvedIn :my-argument .\n    " .
 <http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:nac206eba9ad849d79fa50974ed88d668b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b40 .
+_:n6fa01680b72a4431a70accdf2b2ea716b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n6fa01680b72a4431a70accdf2b2ea716b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b42 .
+_:n6fa01680b72a4431a70accdf2b2ea716b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b45 .
+<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that takes part in an argument according to the 'Toulmin model of argument'."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Claim> .
+<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2002/07/owl#equivalentClass> _:n6fa01680b72a4431a70accdf2b2ea716b36 .
+_:n6fa01680b72a4431a70accdf2b2ea716b43 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isInvolvedIn> .
+_:n6fa01680b72a4431a70accdf2b2ea716b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Evidence> .
+_:n6fa01680b72a4431a70accdf2b2ea716b36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Rebuttal> .
+_:n6fa01680b72a4431a70accdf2b2ea716b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n6fa01680b72a4431a70accdf2b2ea716b43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
 <http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b43 .
-_:nac206eba9ad849d79fa50974ed88d668b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b41 .
-_:nac206eba9ad849d79fa50974ed88d668b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:nac206eba9ad849d79fa50974ed88d668b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b39 .
-_:nac206eba9ad849d79fa50974ed88d668b36 <http://www.w3.org/2002/07/owl#intersectionOf> _:nac206eba9ad849d79fa50974ed88d668b44 .
-<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2002/07/owl#equivalentClass> _:nac206eba9ad849d79fa50974ed88d668b36 .
-_:nac206eba9ad849d79fa50974ed88d668b43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
-_:nac206eba9ad849d79fa50974ed88d668b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Rebuttal> .
-_:nac206eba9ad849d79fa50974ed88d668b43 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isInvolvedIn> .
-_:nac206eba9ad849d79fa50974ed88d668b37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n6fa01680b72a4431a70accdf2b2ea716b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Backing> .
+_:n6fa01680b72a4431a70accdf2b2ea716b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b39 .
+_:n6fa01680b72a4431a70accdf2b2ea716b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b40 .
+_:n6fa01680b72a4431a70accdf2b2ea716b37 <http://www.w3.org/2002/07/owl#unionOf> _:n6fa01680b72a4431a70accdf2b2ea716b38 .

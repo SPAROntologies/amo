@@ -28,7 +28,7 @@
     ],
     "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "_:nac206eba9ad849d79fa50974ed88d668b17"
+        "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b17"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "@id": "_:nac206eba9ad849d79fa50974ed88d668b17",
+    "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b17",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -49,14 +49,14 @@
             "@id": "http://purl.org/spar/amo/ArgumentationEntity"
           },
           {
-            "@id": "_:nac206eba9ad849d79fa50974ed88d668b18"
+            "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b18"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:nac206eba9ad849d79fa50974ed88d668b18",
+    "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b18",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

@@ -1,424 +1,424 @@
-<http://purl.org/spar/amo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "amo"@en .
-<http://purl.org/spar/amo> <http://www.w3.org/2000/01/rdf-schema#label> "Argument Model Ontology (AMO)"@en .
-_:nac206eba9ad849d79fa50974ed88d668b58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isRebuttalIn> .
-_:nac206eba9ad849d79fa50974ed88d668b13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:nac206eba9ad849d79fa50974ed88d668b49 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://purl.org/spar/amo> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/spar/amo"@en .
-<http://purl.org/spar/amo> <https://schema.org/includedInDataCatalog> <https://fairsharing.org/> .
-_:nac206eba9ad849d79fa50974ed88d668b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/hasRebuttal> .
-<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isBackingIn> .
-<http://purl.org/spar/amo/isInvolvedIn> <http://purl.org/vocab/vann/example> "\n    :my-claim \n        amo:isInvolvedIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
-<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Claim> .
-_:nac206eba9ad849d79fa50974ed88d668b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Backing> .
-<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b30 <http://www.w3.org/2002/07/owl#unionOf> _:nac206eba9ad849d79fa50974ed88d668b31 .
-<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#comment> "Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications."@en .
-_:nac206eba9ad849d79fa50974ed88d668b17 <http://www.w3.org/2002/07/owl#intersectionOf> _:nac206eba9ad849d79fa50974ed88d668b19 .
-_:nac206eba9ad849d79fa50974ed88d668b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
-<http://purl.org/spar/amo/Evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:nac206eba9ad849d79fa50974ed88d668b30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/contributor> "Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/hasRebuttal> .
-<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:nac206eba9ad849d79fa50974ed88d668b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b40 .
-<http://purl.org/spar/amo/proves> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-_:nac206eba9ad849d79fa50974ed88d668b52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:nac206eba9ad849d79fa50974ed88d668b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b10 .
-<http://purl.org/spar/amo/isWarrantIn> <http://purl.org/vocab/vann/example> "\n    :my-warrant \n        amo:isWarrantIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
-<http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-_:nac206eba9ad849d79fa50974ed88d668b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b2 .
-_:nac206eba9ad849d79fa50974ed88d668b14 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isRebuttalIn> .
-<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-_:nac206eba9ad849d79fa50974ed88d668b23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
-_:nac206eba9ad849d79fa50974ed88d668b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b58 .
-<http://purl.org/spar/amo/proves> <http://www.w3.org/2004/02/skos/core#note> "By means of the property chain defined, the assertion that links an evidence to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .
-<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:nac206eba9ad849d79fa50974ed88d668b5 .
-_:nac206eba9ad849d79fa50974ed88d668b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:nac206eba9ad849d79fa50974ed88d668b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Evidence> .
-<http://purl.org/spar/amo/backs> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-_:nac206eba9ad849d79fa50974ed88d668b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo/Claim> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/supports> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:supports :my-warrant .\n\n    :my-warrant a amo:Warrant .\n    " .
-_:nac206eba9ad849d79fa50974ed88d668b54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isBackingIn> .
-<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument includes an evidence as one of its (mandatory) components."@en .
-<http://purl.org/spar/amo/isQualifierIn> <http://purl.org/vocab/vann/example> "\n    :my-qualifier \n        amo:isQualifierIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
-_:nac206eba9ad849d79fa50974ed88d668b22 <http://www.w3.org/2002/07/owl#intersectionOf> _:nac206eba9ad849d79fa50974ed88d668b24 .
-_:nac206eba9ad849d79fa50974ed88d668b53 <http://www.w3.org/2002/07/owl#members> _:nac206eba9ad849d79fa50974ed88d668b54 .
-_:nac206eba9ad849d79fa50974ed88d668b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b57 .
-<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Warrant> .
-_:nac206eba9ad849d79fa50974ed88d668b43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
-_:nac206eba9ad849d79fa50974ed88d668b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Claim> .
-_:nac206eba9ad849d79fa50974ed88d668b52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b49 .
-<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
-<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#comment> "An evidence that founds a claim of an argument."@en .
-<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/ArgumentationEntity> <http://purl.org/vocab/vann/example> "\n    :my-claim a amo:ArgumentationEntity ;\n        amo:isInvolvedIn :my-argument .\n    " .
-<http://purl.org/spar/amo/backs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Rebuttal> .
-<http://purl.org/spar/amo> <https://schema.org/codeRepository> <https://github.com/SPAROntologies/amo> .
-<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
-_:nac206eba9ad849d79fa50974ed88d668b48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:nac206eba9ad849d79fa50974ed88d668b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b8 .
-<http://purl.org/spar/amo> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://purl.org/spar/amo/2026-09-30> .
-<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isQualifierIn> .
-<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#label> "supports"@en .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2004/02/skos/core#note> "This property and its sub-properties serve to describe an argument from an high-level perspective (i.e., which argumentation entities take part in it and what role they hold) rather than from a factual point of view (i.e., how argumentation entities are inter-linked between them)."@en .
-<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2000/01/rdf-schema#label> "evidence"@en .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b4 .
-<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isWarrantIn> .
-<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/2000/01/rdf-schema#label> "is backing in"@en .
-<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/amo> <http://purl.org/dc/terms/issued> "2011-05-04" .
-<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/givesBackgroundTo> .
-<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/hasBacking> .
-<http://purl.org/spar/amo/Backing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:nac206eba9ad849d79fa50974ed88d668b47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/amo> <https://schema.org/keywords> "scientometrics"@en .
-<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Claim> .
-<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo/isInvolvedIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#comment> "An evidence that supports a warrant of an argument."@en .
-<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#label> "forces"@en .
-<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/isInvolvedIn> .
-<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Claim> .
-<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#comment> "A claim that is restricted by a rebuttal of an argument."@en .
-_:nac206eba9ad849d79fa50974ed88d668b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:nac206eba9ad849d79fa50974ed88d668b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
-_:nac206eba9ad849d79fa50974ed88d668b51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b52 .
-_:nac206eba9ad849d79fa50974ed88d668b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
-<http://purl.org/spar/amo/forces> <http://www.w3.org/2004/02/skos/core#note> "By means of the property chain defined, the assertion that links a qualifier to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .
-<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/2000/01/rdf-schema#label> "is claim in"@en .
-<http://purl.org/spar/amo/forces> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:nac206eba9ad849d79fa50974ed88d668b1 .
-<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/spar/cito/> .
-<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Evidence> .
-<http://purl.org/spar/amo/Claim> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument includes a claim as one of its (mandatory) components."@en .
-<http://purl.org/spar/amo> <http://xmlns.com/foaf/0.1/logo> <https://github.com/SPAROntologies/sparontologies.github.io/blob/master/static/img/spar/spar-logo.png> .
-<http://purl.org/spar/amo> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/spar/amo/2026-10-05> .
-<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b47 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/hasEvidence> .
-<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#label> "is valid unless"@en .
-<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
-<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b20 .
-_:nac206eba9ad849d79fa50974ed88d668b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b29 .
-_:nac206eba9ad849d79fa50974ed88d668b13 <http://www.w3.org/2002/07/owl#intersectionOf> _:nac206eba9ad849d79fa50974ed88d668b15 .
-_:nac206eba9ad849d79fa50974ed88d668b48 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/hasWarrant> .
-_:nac206eba9ad849d79fa50974ed88d668b33 <http://www.w3.org/2002/07/owl#unionOf> _:nac206eba9ad849d79fa50974ed88d668b34 .
-_:nac206eba9ad849d79fa50974ed88d668b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b37 .
-<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An sentence or word linked to an argument with the scope of qualifying the argument claim."@en .
-<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isDisputedBy> .
-<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Warrant> .
-<http://purl.org/spar/amo> <https://schema.org/image> <https://github.com/SPAROntologies/amo/blob/master/docs/current/argument.png> .
-<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#label> "backs"@en .
-<http://purl.org/spar/amo> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.2"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#label> "leads to"@en .
-_:nac206eba9ad849d79fa50974ed88d668b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Qualifier> .
-<http://purl.org/spar/amo/Argument> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-_:nac206eba9ad849d79fa50974ed88d668b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Warrant> .
-_:nac206eba9ad849d79fa50974ed88d668b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b6 .
-<http://purl.org/spar/amo/supports> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument includes a rebuttal as one of its (optional) components."@en .
-<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Qualifier> .
-<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2002/07/owl#equivalentClass> _:nac206eba9ad849d79fa50974ed88d668b21 .
-<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:nac206eba9ad849d79fa50974ed88d668b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:nac206eba9ad849d79fa50974ed88d668b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/title> "The Argument Model Ontology (AMO)"@en .
-<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2004/02/skos/core#note> "By means of the property chain defined, the assertion that links a warrant to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .
-<http://purl.org/spar/amo/supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Qualifier> .
-<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b39 .
-<http://purl.org/spar/amo/Argument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nac206eba9ad849d79fa50974ed88d668b46 .
-<http://purl.org/spar/amo> <https://schema.org/image> <https://github.com/SPAROntologies/amo/blob/master/docs/current/amo.png> .
-<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:nac206eba9ad849d79fa50974ed88d668b3 .
-<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni (https://orcid.org/0000-0003-0530-4305)"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2000/01/rdf-schema#label> "argumentation entity"@en .
-<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/amo/Claim> <http://www.w3.org/2000/01/rdf-schema#comment> "A fact that must be established - e.g., 'This is a consistent OWL ontology'."@en .
-_:nac206eba9ad849d79fa50974ed88d668b53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointProperties> .
-<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Backing> .
-<http://purl.org/spar/amo> <http://purl.org/dc/terms/source> <https://github.com/SPAROntologies/amo/blob/master/docs/cq.md> .
-<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2000/01/rdf-schema#label> "has rebuttal"@en .
-<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#label> "backing"@en .
-_:nac206eba9ad849d79fa50974ed88d668b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
-<http://purl.org/spar/amo> <http://purl.org/dc/terms/created> "2011-05-04" .
-_:nac206eba9ad849d79fa50974ed88d668b10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
-<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2000/01/rdf-schema#label> "has backing"@en .
-_:nac206eba9ad849d79fa50974ed88d668b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isClaimIn> .
-<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/description> "\nThe **_Argument Model Ontology (AMO)_** is an OWL 2 DL ontology that aims to encode the [Toulmin's theory](https://doi.org/10.1017/CBO9780511840005) through OWL classes and properties, in order to describe a web of inter-linked entities that participate, with a specific role, in one or more arguments.\n\nToulmin's model of argument focuses on the justificatory function of argumentation: rather than evaluating arguments through formal logic, it describes how people, in practice, put forward a claim and then justify it. \nAccording to this model, every practical argument can be analysed in terms of six interrelated components. \nThree of them are essential: the claim to be established, the evidence (or data) on which it is founded, and the warrant that bridges from the evidence to the claim. \nThe other three may be omitted in some arguments: the backing that certifies the warrant, the qualifier that expresses the degree of certainty of the claim, and the rebuttal that states the conditions under which the claim would not hold.\n\n![The main architecture of AMO.](amo.png)\n\nAMO models an argument through the class `amo:Argument`, whose components are instances of `amo:Claim`, `amo:Evidence`, `amo:Warrant`, `amo:Backing` and `amo:Rebuttal`, all grouped under the class `amo:ArgumentationEntity`, and of `amo:Qualifier`. \nAn argument is linked to its components through the sub-properties of `amo:involves` (i.e., `amo:hasClaim`, `amo:hasEvidence`, `amo:hasWarrant`, `amo:hasBacking`, `amo:hasQualifier` and `amo:hasRebuttal`), and each argument must have exactly one claim and at least one evidence and one warrant. \nThe components are, in turn, linked to one another: an evidence proves a claim (`amo:proves`) and supports a warrant (`amo:supports`), a warrant leads to a claim (`amo:leadsTo`), a backing backs a warrant (`amo:backs`), a qualifier forces a claim (`amo:forces`), and a claim is valid unless a rebuttal holds (`amo:isValidUnless`). \nSeveral of these relations are automatically inferred, by means of property chains, from the description of the roles that the components hold within the argument.\n\n![How an argument is modelled using AMO.](argument.png)\n\nAMO is aligned with the [Citation Typing Ontology (CiTO)](http://purl.org/spar/cito), an ontology for the characterization of citations, both factually and rhetorically that forms part of [SPAR, a suite of Semantic Publishing and Referencing Ontologies](http://sparontologies.net).\n\n## Examples of use\n\nIn the following subsections, we introduce some examples to showcase how to use AMO. \n\nThe prefixes that are used in all the examples provided below are defined as follows:\n\n    @prefix : <http://www.sparontologies.net/example/> .\n    @prefix amo: <http://purl.org/spar/amo/> .\n\n### Describing the components of an argument\n\nConsider the argument \"This ontology was developed in OWL, and since an ontology developed in OWL is a consistent OWL ontology, as stated by the OWL 2 specifications, this is presumably a consistent OWL ontology, unless a reasoner for OWL 2 proves that it is not consistent\". \nThe argument can be described from a high-level perspective by stating which argumentation entities it involves and which role each of them holds.\n\n    :argument a amo:Argument ;\n        amo:hasClaim :consistency-claim ;\n        amo:hasEvidence :developed-in-owl ;\n        amo:hasWarrant :owl-warrant ;\n        amo:hasBacking :owl2-spec ;\n        amo:hasQualifier :presumably ;\n        amo:hasRebuttal :reasoner-rebuttal .\n\n    :consistency-claim a amo:Claim .\n    :developed-in-owl a amo:Evidence .\n    :owl-warrant a amo:Warrant .\n    :owl2-spec a amo:Backing .\n    :presumably a amo:Qualifier .\n    :reasoner-rebuttal a amo:Rebuttal .\n\n### Describing the relations between argumentation entities\n\nThe same argument can be described from a factual perspective, by stating how its argumentation entities are linked to one another. \nThe relations between evidence and claim, warrant and claim, qualifier and claim, and claim and rebuttal can also be inferred from the high-level description through the property chains defined in AMO.\n\n    :developed-in-owl amo:proves :consistency-claim ;\n        amo:supports :owl-warrant .\n\n    :owl-warrant amo:leadsTo :consistency-claim .\n\n    :owl2-spec amo:backs :owl-warrant .\n\n    :presumably amo:forces :consistency-claim .\n\n    :consistency-claim amo:isValidUnless :reasoner-rebuttal .\n\n## Competency Questions\n\nAMO can be used for answering several questions related to arguments and how argumentation entities are related to each other.\nIn the following subsections, some of them are introduced together with their respective SPARQL queries. \n\nThe prefixes that are used in all the SPARQL queries provided below are defined as follows:\n\n    PREFIX : <http://www.sparontologies.net/example/>\n    PREFIX amo: <http://purl.org/spar/amo/>\n    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\n### CQ1\n\nWhat is the claim of a given argument, and which evidence proves it?\n\n    SELECT ?claim ?evidence\n    WHERE {\n        :argument amo:hasClaim ?claim ;\n            amo:hasEvidence ?evidence .\n    }\n\n### CQ2\n\nWhich warrants lead to a given claim, and which backings attest them?\n\n    SELECT ?warrant ?backing\n    WHERE {\n        ?warrant amo:leadsTo :consistency-claim .\n        OPTIONAL { ?backing amo:backs ?warrant }\n    }\n\n### CQ3\n\nWhat is the degree of force of a given claim, and under which rebuttals is it not valid?\n\n    SELECT ?qualifier ?rebuttal\n    WHERE {\n        OPTIONAL { ?qualifier amo:forces :consistency-claim }\n        OPTIONAL { :consistency-claim amo:isValidUnless ?rebuttal }\n    }\n\n"@en .
-<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#label> "relates to"@en .
-<http://purl.org/spar/amo/involves> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:involves :my-claim, \n            :my-evidence, \n            :my-warrant .\n    " .
-<http://purl.org/spar/amo> <http://purl.org/vocab/vann/changes> <https://github.com/SPAROntologies/amo/blob/master/CHANGELOG.md> .
-<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2000/01/rdf-schema#comment> "A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'."@en .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier."@en .
-<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
-<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/hasClaim> .
-<http://purl.org/spar/amo/Qualifier> <http://purl.org/vocab/vann/example> "\n    :my-qualifier a amo:Qualifier ;\n        amo:isQualifierIn :my-argument ;\n        amo:forces :my-claim .\n    " .
-_:nac206eba9ad849d79fa50974ed88d668b50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b47 .
-<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
-<http://purl.org/spar/amo/isEvidenceIn> <http://purl.org/vocab/vann/example> "\n    :my-evidence \n        amo:isEvidenceIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
-<http://purl.org/spar/amo> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> .
-<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#label> "proves"@en .
-<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/creator> "Fabio Vitali (https://orcid.org/0000-0002-7562-5203)"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://purl.org/spar/amo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://purl.org/spar/amo/forces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#label> "involves"@en .
-<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b27 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isClaimIn> .
-<http://purl.org/spar/amo/proves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
-<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
-<http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/amo> <https://schema.org/keywords> "argument model"@en .
-_:nac206eba9ad849d79fa50974ed88d668b49 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/hasClaim> .
-_:nac206eba9ad849d79fa50974ed88d668b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/amo/isBackingIn> <http://purl.org/vocab/vann/example> "\n    :my-backing \n        amo:isBackingIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
-<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b43 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isInvolvedIn> .
-_:nac206eba9ad849d79fa50974ed88d668b54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b55 .
-<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/date> "2026-10-05" .
-<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
-<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that takes part in an argument according to the 'Toulmin model of argument'."@en .
-<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/proves> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:nac206eba9ad849d79fa50974ed88d668b7 .
-<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://purl.org/spar/amo> <https://schema.org/keywords> "Semantic Publishing and Referencing Ontologies"@en .
-<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentative entity linked to an argument in which it is considered an evidence."@en .
-<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Warrant> .
-<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/language> <http://id.loc.gov/vocabulary/iso639-2/eng> .
-<http://purl.org/spar/amo/relatesTo> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:relatesTo :my-claim .\n\n    :my-claim a amo:Claim .\n    " .
-_:nac206eba9ad849d79fa50974ed88d668b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isClaimIn> .
-_:nac206eba9ad849d79fa50974ed88d668b29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b27 .
-_:nac206eba9ad849d79fa50974ed88d668b49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/amo> <http://purl.org/dc/terms/bibliographicCitation> "Peroni, S., Tomasi, F., Vitali, F., Zingoni, J. (2014). Semantic Lenses as Exploration Method for Scholarly Articles. In: Catarci, T., Ferro, N., Poggi, A. (eds) Bridging Between Cultural Heritage Institutions. IRCDL 2013. Communications in Computer and Information Science, vol 385. Springer, Berlin, Heidelberg. https://doi.org/10.1007/978-3-642-54347-0_13." .
-_:nac206eba9ad849d79fa50974ed88d668b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isEvidenceIn> .
-<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
-<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/qualifies> .
-<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Rebuttal> .
-<http://purl.org/spar/amo/Warrant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
-<http://purl.org/spar/amo/forces> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo> <https://schema.org/keywords> "SPAR Ontologies"@en .
-<http://purl.org/spar/amo/Argument> <http://www.w3.org/2000/01/rdf-schema#comment> "\nAn argument, or practical argument according to the 'Toulmin model of argument', focuses on the justificatory function of argumentation: practical arguments first find a claim of interest, and then provide justification for it.\n\nEach argument must be analyzed according to six interrelated components: claim, evidence, warrant, backing, rebuttal and qualifier. \nThe first three elements, 'claim', 'data' and 'warrant', are considered as the essential components of practical arguments, while the second triad, 'qualifier', 'backing', and 'rebuttal', may not be needed in some arguments.\n"@en .
-<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
-_:nac206eba9ad849d79fa50974ed88d668b26 <http://www.w3.org/2002/07/owl#intersectionOf> _:nac206eba9ad849d79fa50974ed88d668b28 .
-<http://purl.org/spar/amo/hasClaim> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasClaim :my-claim .\n    " .
-_:nac206eba9ad849d79fa50974ed88d668b36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-_:nac206eba9ad849d79fa50974ed88d668b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:nac206eba9ad849d79fa50974ed88d668b27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
-_:nac206eba9ad849d79fa50974ed88d668b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2002/07/owl#equivalentClass> _:nac206eba9ad849d79fa50974ed88d668b17 .
-<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2000/01/rdf-schema#label> "has claim"@en .
-<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
-<http://purl.org/spar/amo/Claim> <http://www.w3.org/2000/01/rdf-schema#label> "claim"@en .
-_:nac206eba9ad849d79fa50974ed88d668b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
-_:nac206eba9ad849d79fa50974ed88d668b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/amo/Claim> <http://purl.org/vocab/vann/example> "\n    :my-claim a amo:Claim ;\n        amo:isClaimIn :my-argument ;\n        amo:isValidUnless :my-rebuttal .\n    " .
-_:nac206eba9ad849d79fa50974ed88d668b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/hasClaim> .
-<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b25 .
-_:nac206eba9ad849d79fa50974ed88d668b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isEvidenceIn> .
-<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/hasQualifier> .
-<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#comment> "A backing that attests the warrant of an argument."@en .
-<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/isInvolvedIn> .
-<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#range> _:nac206eba9ad849d79fa50974ed88d668b33 .
-<http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Rebuttal> .
-_:nac206eba9ad849d79fa50974ed88d668b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b18 .
-<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2004/02/skos/core#note> "A warrant that points to a claim from the related evidence within an argument."@en .
-<http://purl.org/spar/amo/isInvolvedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#comment> "A qualifier that expresses as degree of force concerning a claim of an argument."@en .
-<http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentative entity linked to an argument in which it is considered a rebuttal."@en .
-_:nac206eba9ad849d79fa50974ed88d668b9 <http://www.w3.org/2002/07/owl#intersectionOf> _:nac206eba9ad849d79fa50974ed88d668b11 .
-_:nac206eba9ad849d79fa50974ed88d668b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
-<http://purl.org/spar/amo/hasRebuttal> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasRebuttal :my-rebuttal .\n    " .
-<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2002/07/owl#equivalentClass> _:nac206eba9ad849d79fa50974ed88d668b22 .
-_:nac206eba9ad849d79fa50974ed88d668b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "has evidence"@en .
-<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Evidence> .
-<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentation entity relates to another one in some way - for example, it is the evidence that is used to prove a claim of an argument."@en .
-<http://purl.org/spar/amo> <http://purl.org/dc/terms/publisher> <https://ror.org/00wb4mk85> .
-<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc."@en .
-<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentative entity linked to an argument in which it is considered a claim."@en .
-<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Warrant> .
-_:nac206eba9ad849d79fa50974ed88d668b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b45 .
-<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/Warrant> <http://purl.org/vocab/vann/example> "\n    :my-warrant a amo:Warrant ;\n        amo:isWarrantIn :my-argument ;\n        amo:leadsTo :my-claim .\n    " .
-<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Qualifier> .
-_:nac206eba9ad849d79fa50974ed88d668b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo/isInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is involved in"@en .
-<http://purl.org/spar/amo/Backing> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo> <http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/status/published> .
-<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/2000/01/rdf-schema#label> "is warrant in"@en .
-<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
-<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b41 .
 <http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument includes a warrant as one of its (mandatory) components."@en .
-<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Claim> .
-<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/hasEvidence> .
-<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/isInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/2000/01/rdf-schema#label> "is evidence in"@en .
-_:nac206eba9ad849d79fa50974ed88d668b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b56 .
-_:nac206eba9ad849d79fa50974ed88d668b59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo/Evidence> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:isEvidenceIn :my-argument ;\n        amo:proves :my-claim .\n    " .
-_:nac206eba9ad849d79fa50974ed88d668b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isWarrantIn> .
-_:nac206eba9ad849d79fa50974ed88d668b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b32 .
-_:nac206eba9ad849d79fa50974ed88d668b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b42 .
-_:nac206eba9ad849d79fa50974ed88d668b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b14 .
-<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedAsEvidenceBy> .
-_:nac206eba9ad849d79fa50974ed88d668b50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b51 .
-<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2004/02/skos/core#note> "By means of the property chain defined, the assertion that links a claim to the relative rebuttal is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .
-<http://purl.org/spar/amo/Claim> <http://www.w3.org/2002/07/owl#equivalentClass> _:nac206eba9ad849d79fa50974ed88d668b26 .
-<http://purl.org/spar/amo/Argument> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasClaim :my-claim ;\n        amo:hasEvidence :my-evidence ;\n        amo:hasWarrant :my-warrant ;\n        amo:hasBacking :my-backing ;\n        amo:hasQualifier :my-qualifier ;\n        amo:hasRebuttal :my-rebuttal .\n    " .
-<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2002/07/owl#equivalentClass> _:nac206eba9ad849d79fa50974ed88d668b13 .
-<http://purl.org/spar/amo/Argument> <http://www.w3.org/2000/01/rdf-schema#label> "argument"@en .
-<http://purl.org/spar/amo/isValidUnless> <http://purl.org/vocab/vann/example> "\n    :my-claim a amo:Claim ;\n        amo:isValidUnless :my-rebuttal .\n\n    :my-rebuttal a amo:Rebuttal .\n    " .
-<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/amo/isClaimIn> <http://purl.org/vocab/vann/example> "\n    :my-claim \n        amo:isClaimIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
-_:nac206eba9ad849d79fa50974ed88d668b18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
-<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument includes a qualifier as one of its (optional) components."@en .
-<http://purl.org/spar/amo> <http://purl.org/ontology/bibo/doi> "TBA" .
-<http://purl.org/spar/amo/Backing> <http://www.w3.org/2002/07/owl#equivalentClass> _:nac206eba9ad849d79fa50974ed88d668b9 .
-_:nac206eba9ad849d79fa50974ed88d668b27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/isInvolvedIn> .
-<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2000/01/rdf-schema#label> "has qualifier"@en .
-<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Evidence> .
-<http://purl.org/spar/amo/Claim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/hasClaim> .
-_:nac206eba9ad849d79fa50974ed88d668b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b12 .
-<http://purl.org/spar/amo/leadsTo> <http://purl.org/vocab/vann/example> "\n    :my-warrant a amo:Warrant ;\n        amo:leadsTo :my-claim .\n\n    :my-claim a amo:Claim ." .
-<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/givesSupportTo> .
-_:nac206eba9ad849d79fa50974ed88d668b23 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isWarrantIn> .
-_:nac206eba9ad849d79fa50974ed88d668b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b35 .
-_:nac206eba9ad849d79fa50974ed88d668b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo/Argument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/isRebuttalIn> <http://purl.org/vocab/vann/example> "\n    :my-rebuttal \n        amo:isRebuttalIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
-<http://purl.org/spar/amo/hasWarrant> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasWarrant :my-warrant .\n    " .
-<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/amo/isInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentation entity involved in the presentation of an argument."@en .
-<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/isInvolvedIn> .
-_:nac206eba9ad849d79fa50974ed88d668b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b23 .
-_:nac206eba9ad849d79fa50974ed88d668b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b16 .
-<http://purl.org/spar/amo/involves> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2000/01/rdf-schema#label> "rebuttal"@en .
-_:nac206eba9ad849d79fa50974ed88d668b18 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isEvidenceIn> .
-<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/hasWarrant> .
-_:nac206eba9ad849d79fa50974ed88d668b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
-<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2000/01/rdf-schema#comment> "Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'."@en .
-_:nac206eba9ad849d79fa50974ed88d668b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/hasClaim> .
-<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/amo/Rebuttal> <http://purl.org/vocab/vann/example> "\n    :my-rebuttal a amo:Rebuttal ;\n        amo:isRebuttalIn :my-argument .\n\n    :my-claim \n        amo:isValidUnless :my-rebuttal .\n    " .
-<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-_:nac206eba9ad849d79fa50974ed88d668b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
-<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/2000/01/rdf-schema#label> "is qualifier in"@en .
-<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b48 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-_:nac206eba9ad849d79fa50974ed88d668b21 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isQualifierIn> .
-<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/isInvolvedIn> .
-<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
-_:nac206eba9ad849d79fa50974ed88d668b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isQualifierIn> .
+<http://purl.org/spar/amo/Argument> <http://www.w3.org/2000/01/rdf-schema#comment> "\nAn argument, or practical argument according to the 'Toulmin model of argument', focuses on the justificatory function of argumentation: practical arguments first find a claim of interest, and then provide justification for it.\n\nEach argument must be analyzed according to six interrelated components: claim, evidence, warrant, backing, rebuttal and qualifier. \nThe first three elements, 'claim', 'data' and 'warrant', are considered as the essential components of practical arguments, while the second triad, 'qualifier', 'backing', and 'rebuttal', may not be needed in some arguments.\n"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b14 .
+_:n6fa01680b72a4431a70accdf2b2ea716b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.2"^^<http://www.w3.org/2001/XMLSchema#string> .
 <http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/isInvolvedIn> .
-<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/amo> <http://purl.org/dc/terms/modified> "2026-10-05" .
-<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
-<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:nac206eba9ad849d79fa50974ed88d668b46 <http://www.w3.org/2002/07/owl#intersectionOf> _:nac206eba9ad849d79fa50974ed88d668b50 .
-<http://purl.org/spar/amo/hasQualifier> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasQualifier :my-qualifier .\n    " .
-<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
-<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/confirms> .
-_:nac206eba9ad849d79fa50974ed88d668b47 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://purl.org/spar/amo/hasEvidence> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasEvidence :my-evidence .\n    " .
-<http://purl.org/spar/amo> <https://schema.org/keywords> "semantic publishing"@en .
-_:nac206eba9ad849d79fa50974ed88d668b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b33 <http://www.w3.org/2002/07/owl#unionOf> _:n6fa01680b72a4431a70accdf2b2ea716b34 .
+_:n6fa01680b72a4431a70accdf2b2ea716b21 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isQualifierIn> .
+_:n6fa01680b72a4431a70accdf2b2ea716b46 <http://www.w3.org/2002/07/owl#intersectionOf> _:n6fa01680b72a4431a70accdf2b2ea716b50 .
+<http://purl.org/spar/amo/Claim> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#label> "supports"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b17 <http://www.w3.org/2002/07/owl#intersectionOf> _:n6fa01680b72a4431a70accdf2b2ea716b19 .
+<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentative entity linked to an argument in which it is considered an evidence."@en .
+<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that takes part in an argument according to the 'Toulmin model of argument'."@en .
+<http://purl.org/spar/amo/isValidUnless> <http://purl.org/vocab/vann/example> "\n    :my-claim a amo:Claim ;\n        amo:isValidUnless :my-rebuttal .\n\n    :my-rebuttal a amo:Rebuttal .\n    " .
+<http://purl.org/spar/amo/relatesTo> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:relatesTo :my-claim .\n\n    :my-claim a amo:Claim .\n    " .
 <http://purl.org/spar/amo/hasBacking> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasBacking :my-backing .\n    " .
-<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-_:nac206eba9ad849d79fa50974ed88d668b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/amo> <https://schema.org/keywords> "bibliometrics"@en .
-<http://purl.org/spar/amo/backs> <http://purl.org/vocab/vann/example> "\n    :my-backing a amo:Backing ;\n        amo:backs :my-warrant .\n\n    :my-warrant a amo:Warrant .\n    " .
-<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-_:nac206eba9ad849d79fa50974ed88d668b29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:nac206eba9ad849d79fa50974ed88d668b30 .
-<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentative entity linked to an argument in which it is considered a warrant."@en .
-<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Backing> .
-_:nac206eba9ad849d79fa50974ed88d668b51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b48 .
-<http://purl.org/spar/amo/forces> <http://purl.org/vocab/vann/example> "\n    :my-qualifier a amo:Qualifier ;\n        amo:forces :my-claim .\n\n    :my-claim a amo:Claim .\n    " .
-<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
-_:nac206eba9ad849d79fa50974ed88d668b58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b59 .
-<http://purl.org/spar/amo> <https://schema.org/keywords> "scholarly publishing"@en .
-<http://purl.org/spar/amo/Argument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:nac206eba9ad849d79fa50974ed88d668b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/ArgumentationEntity> .
-<http://purl.org/spar/amo/isInvolvedIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/involves> .
-_:nac206eba9ad849d79fa50974ed88d668b36 <http://www.w3.org/2002/07/owl#intersectionOf> _:nac206eba9ad849d79fa50974ed88d668b44 .
-<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument includes a backing as one of its (optional) components."@en .
-<http://purl.org/spar/amo> <http://www.w3.org/2002/07/owl#priorVersion> <http://purl.org/spar/amo/2026-09-30> .
-<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2000/01/rdf-schema#label> "warrant"@en .
-<http://purl.org/spar/amo/Backing> <http://purl.org/vocab/vann/example> "\n    :my-backing a amo:Backing ;\n        amo:isBackingIn :my-argument ;\n        amo:backs :my-warrant .\n    " .
-<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
-<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-_:nac206eba9ad849d79fa50974ed88d668b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Claim> .
+_:n6fa01680b72a4431a70accdf2b2ea716b10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+_:n6fa01680b72a4431a70accdf2b2ea716b43 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isInvolvedIn> .
+<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/hasBacking> .
+<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Warrant> .
+_:n6fa01680b72a4431a70accdf2b2ea716b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b6 .
+<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2000/01/rdf-schema#label> "has backing"@en .
+<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "has evidence"@en .
+<http://purl.org/spar/amo> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/spar/amo/2026-10-05> .
+<http://purl.org/spar/amo/Argument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n6fa01680b72a4431a70accdf2b2ea716b48 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:n6fa01680b72a4431a70accdf2b2ea716b23 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isWarrantIn> .
+<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#comment> "A backing that attests the warrant of an argument."@en .
+<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Rebuttal> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2004/02/skos/core#note> "By means of the property chain defined, the assertion that links a claim to the relative rebuttal is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n6fa01680b72a4431a70accdf2b2ea716b37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo> <http://purl.org/dc/terms/bibliographicCitation> "Peroni, S., Tomasi, F., Vitali, F., Zingoni, J. (2014). Semantic Lenses as Exploration Method for Scholarly Articles. In: Catarci, T., Ferro, N., Poggi, A. (eds) Bridging Between Cultural Heritage Institutions. IRCDL 2013. Communications in Computer and Information Science, vol 385. Springer, Berlin, Heidelberg. https://doi.org/10.1007/978-3-642-54347-0_13." .
+<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/2000/01/rdf-schema#label> "is qualifier in"@en .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:n6fa01680b72a4431a70accdf2b2ea716b50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b51 .
+<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Evidence> .
 <http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#label> "has warrant"@en .
-<http://purl.org/spar/amo/proves> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:proves :my-claim .\n\n    :my-claim a amo:Claim .\n    " .
-<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
-<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2000/01/rdf-schema#comment> "A statement bridging from the evidence to the claim - e.g., 'An ontology developed in OWL is a consistent OWL ontology'.\n"@en .
-_:nac206eba9ad849d79fa50974ed88d668b37 <http://www.w3.org/2002/07/owl#unionOf> _:nac206eba9ad849d79fa50974ed88d668b38 .
-_:nac206eba9ad849d79fa50974ed88d668b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nac206eba9ad849d79fa50974ed88d668b43 .
-_:nac206eba9ad849d79fa50974ed88d668b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2002/07/owl#equivalentClass> _:nac206eba9ad849d79fa50974ed88d668b36 .
-<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2000/01/rdf-schema#label> "qualifier"@en .
-<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentative entity linked to an argument in which it is considered a backing."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2002/07/owl#equivalentClass> _:n6fa01680b72a4431a70accdf2b2ea716b13 .
+<http://purl.org/spar/amo/Claim> <http://www.w3.org/2000/01/rdf-schema#comment> "A fact that must be established - e.g., 'This is a consistent OWL ontology'."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b26 <http://www.w3.org/2002/07/owl#intersectionOf> _:n6fa01680b72a4431a70accdf2b2ea716b28 .
+_:n6fa01680b72a4431a70accdf2b2ea716b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Rebuttal> .
+<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/2000/01/rdf-schema#label> "is claim in"@en .
+<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:n6fa01680b72a4431a70accdf2b2ea716b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n6fa01680b72a4431a70accdf2b2ea716b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+_:n6fa01680b72a4431a70accdf2b2ea716b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b4 .
+<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/hasWarrant> .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2004/02/skos/core#note> "A warrant that points to a claim from the related evidence within an argument."@en .
+<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n6fa01680b72a4431a70accdf2b2ea716b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/Claim> <http://purl.org/vocab/vann/example> "\n    :my-claim a amo:Claim ;\n        amo:isClaimIn :my-argument ;\n        amo:isValidUnless :my-rebuttal .\n    " .
+_:n6fa01680b72a4431a70accdf2b2ea716b27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2000/01/rdf-schema#label> "evidence"@en .
+<http://purl.org/spar/amo/Evidence> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:isEvidenceIn :my-argument ;\n        amo:proves :my-claim .\n    " .
+_:n6fa01680b72a4431a70accdf2b2ea716b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b16 .
+_:n6fa01680b72a4431a70accdf2b2ea716b53 <http://www.w3.org/2002/07/owl#members> _:n6fa01680b72a4431a70accdf2b2ea716b54 .
+_:n6fa01680b72a4431a70accdf2b2ea716b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b37 .
+<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/2000/01/rdf-schema#label> "is evidence in"@en .
+<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/isInvolvedIn> .
+<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
+<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+_:n6fa01680b72a4431a70accdf2b2ea716b22 <http://www.w3.org/2002/07/owl#intersectionOf> _:n6fa01680b72a4431a70accdf2b2ea716b24 .
+_:n6fa01680b72a4431a70accdf2b2ea716b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b58 .
+<http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/isInvolvedIn> .
+_:n6fa01680b72a4431a70accdf2b2ea716b36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n6fa01680b72a4431a70accdf2b2ea716b14 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isRebuttalIn> .
+_:n6fa01680b72a4431a70accdf2b2ea716b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument includes a claim as one of its (mandatory) components."@en .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:n6fa01680b72a4431a70accdf2b2ea716b13 <http://www.w3.org/2002/07/owl#intersectionOf> _:n6fa01680b72a4431a70accdf2b2ea716b15 .
+_:n6fa01680b72a4431a70accdf2b2ea716b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isEvidenceIn> .
+<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://purl.org/spar/amo/2026-09-30> .
+<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#label> "relates to"@en .
+<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2002/07/owl#equivalentClass> _:n6fa01680b72a4431a70accdf2b2ea716b22 .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#label> "forces"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo> <https://schema.org/image> <https://github.com/SPAROntologies/amo/blob/master/docs/current/argument.png> .
+<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Qualifier> .
+<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n6fa01680b72a4431a70accdf2b2ea716b59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/backs> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/title> "The Argument Model Ontology (AMO)"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b10 .
+_:n6fa01680b72a4431a70accdf2b2ea716b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n6fa01680b72a4431a70accdf2b2ea716b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b40 .
+<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Evidence> .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#label> "backing"@en .
+<http://purl.org/spar/amo/Claim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Warrant> .
+_:n6fa01680b72a4431a70accdf2b2ea716b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b35 .
+_:n6fa01680b72a4431a70accdf2b2ea716b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isWarrantIn> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#comment> "A qualifier that expresses as degree of force concerning a claim of an argument."@en .
+<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/language> <http://id.loc.gov/vocabulary/iso639-2/eng> .
 <http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/2000/01/rdf-schema#label> "is rebuttal in"@en .
-_:nac206eba9ad849d79fa50974ed88d668b37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/ArgumentationEntity> <http://purl.org/vocab/vann/example> "\n    :my-claim a amo:ArgumentationEntity ;\n        amo:isInvolvedIn :my-argument .\n    " .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2004/02/skos/core#note> "This property and its sub-properties serve to describe an argument from an high-level perspective (i.e., which argumentation entities take part in it and what role they hold) rather than from a factual point of view (i.e., how argumentation entities are inter-linked between them)."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/amo/Argument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isClaimIn> .
+<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
+_:n6fa01680b72a4431a70accdf2b2ea716b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+_:n6fa01680b72a4431a70accdf2b2ea716b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b23 .
+_:n6fa01680b72a4431a70accdf2b2ea716b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Evidence> .
+<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
+<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n6fa01680b72a4431a70accdf2b2ea716b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Claim> .
+<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2002/07/owl#equivalentClass> _:n6fa01680b72a4431a70accdf2b2ea716b36 .
+_:n6fa01680b72a4431a70accdf2b2ea716b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b39 .
+_:n6fa01680b72a4431a70accdf2b2ea716b52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b49 .
+<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#comment> "An evidence that founds a claim of an argument."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b36 <http://www.w3.org/2002/07/owl#intersectionOf> _:n6fa01680b72a4431a70accdf2b2ea716b44 .
+<http://purl.org/spar/amo> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> .
+<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2000/01/rdf-schema#comment> "Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b25 .
+_:n6fa01680b72a4431a70accdf2b2ea716b18 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isEvidenceIn> .
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/isInvolvedIn> .
+_:n6fa01680b72a4431a70accdf2b2ea716b53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointProperties> .
+<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Rebuttal> .
+_:n6fa01680b72a4431a70accdf2b2ea716b49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n6fa01680b72a4431a70accdf2b2ea716b23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Backing> .
+<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/2000/01/rdf-schema#label> "rebuttal"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b59 .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#comment> "An evidence that supports a warrant of an argument."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/description> "\nThe **_Argument Model Ontology (AMO)_** is an OWL 2 DL ontology that aims to encode the [Toulmin's theory](https://doi.org/10.1017/CBO9780511840005) through OWL classes and properties, in order to describe a web of inter-linked entities that participate, with a specific role, in one or more arguments.\n\nToulmin's model of argument focuses on the justificatory function of argumentation: rather than evaluating arguments through formal logic, it describes how people, in practice, put forward a claim and then justify it. \nAccording to this model, every practical argument can be analysed in terms of six interrelated components. \nThree of them are essential: the claim to be established, the evidence (or data) on which it is founded, and the warrant that bridges from the evidence to the claim. \nThe other three may be omitted in some arguments: the backing that certifies the warrant, the qualifier that expresses the degree of certainty of the claim, and the rebuttal that states the conditions under which the claim would not hold.\n\n![The main architecture of AMO.](amo.png)\n\nAMO models an argument through the class `amo:Argument`, whose components are instances of `amo:Claim`, `amo:Evidence`, `amo:Warrant`, `amo:Backing` and `amo:Rebuttal`, all grouped under the class `amo:ArgumentationEntity`, and of `amo:Qualifier`. \nAn argument is linked to its components through the sub-properties of `amo:involves` (i.e., `amo:hasClaim`, `amo:hasEvidence`, `amo:hasWarrant`, `amo:hasBacking`, `amo:hasQualifier` and `amo:hasRebuttal`), and each argument must have exactly one claim and at least one evidence and one warrant. \nThe components are, in turn, linked to one another: an evidence proves a claim (`amo:proves`) and supports a warrant (`amo:supports`), a warrant leads to a claim (`amo:leadsTo`), a backing backs a warrant (`amo:backs`), a qualifier forces a claim (`amo:forces`), and a claim is valid unless a rebuttal holds (`amo:isValidUnless`). \nSeveral of these relations are automatically inferred, by means of property chains, from the description of the roles that the components hold within the argument.\n\n![How an argument is modelled using AMO.](argument.png)\n\nAMO is aligned with the [Citation Typing Ontology (CiTO)](http://purl.org/spar/cito), an ontology for the characterization of citations, both factually and rhetorically that forms part of [SPAR, a suite of Semantic Publishing and Referencing Ontologies](http://sparontologies.net).\n\n## Examples of use\n\nIn the following subsections, we introduce some examples to showcase how to use AMO. \n\nThe prefixes that are used in all the examples provided below are defined as follows:\n\n    @prefix : <http://www.sparontologies.net/example/> .\n    @prefix amo: <http://purl.org/spar/amo/> .\n\n### Describing the components of an argument\n\nConsider the argument \"This ontology was developed in OWL, and since an ontology developed in OWL is a consistent OWL ontology, as stated by the OWL 2 specifications, this is presumably a consistent OWL ontology, unless a reasoner for OWL 2 proves that it is not consistent\". \nThe argument can be described from a high-level perspective by stating which argumentation entities it involves and which role each of them holds.\n\n    :argument a amo:Argument ;\n        amo:hasClaim :consistency-claim ;\n        amo:hasEvidence :developed-in-owl ;\n        amo:hasWarrant :owl-warrant ;\n        amo:hasBacking :owl2-spec ;\n        amo:hasQualifier :presumably ;\n        amo:hasRebuttal :reasoner-rebuttal .\n\n    :consistency-claim a amo:Claim .\n    :developed-in-owl a amo:Evidence .\n    :owl-warrant a amo:Warrant .\n    :owl2-spec a amo:Backing .\n    :presumably a amo:Qualifier .\n    :reasoner-rebuttal a amo:Rebuttal .\n\n### Describing the relations between argumentation entities\n\nThe same argument can be described from a factual perspective, by stating how its argumentation entities are linked to one another. \nThe relations between evidence and claim, warrant and claim, qualifier and claim, and claim and rebuttal can also be inferred from the high-level description through the property chains defined in AMO.\n\n    :developed-in-owl amo:proves :consistency-claim ;\n        amo:supports :owl-warrant .\n\n    :owl-warrant amo:leadsTo :consistency-claim .\n\n    :owl2-spec amo:backs :owl-warrant .\n\n    :presumably amo:forces :consistency-claim .\n\n    :consistency-claim amo:isValidUnless :reasoner-rebuttal .\n\n## Competency Questions\n\nAMO can be used for answering several questions related to arguments and how argumentation entities are related to each other.\nIn the following subsections, some of them are introduced together with their respective SPARQL queries. \n\nThe prefixes that are used in all the SPARQL queries provided below are defined as follows:\n\n    PREFIX : <http://www.sparontologies.net/example/>\n    PREFIX amo: <http://purl.org/spar/amo/>\n    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\n### CQ1\n\nWhat is the claim of a given argument, and which evidence proves it?\n\n    SELECT ?claim ?evidence\n    WHERE {\n        :argument amo:hasClaim ?claim ;\n            amo:hasEvidence ?evidence .\n    }\n\n### CQ2\n\nWhich warrants lead to a given claim, and which backings attest them?\n\n    SELECT ?warrant ?backing\n    WHERE {\n        ?warrant amo:leadsTo :consistency-claim .\n        OPTIONAL { ?backing amo:backs ?warrant }\n    }\n\n### CQ3\n\nWhat is the degree of force of a given claim, and under which rebuttals is it not valid?\n\n    SELECT ?qualifier ?rebuttal\n    WHERE {\n        OPTIONAL { ?qualifier amo:forces :consistency-claim }\n        OPTIONAL { :consistency-claim amo:isValidUnless ?rebuttal }\n    }\n\n"@en .
+<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#label> "is valid unless"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b56 .
+<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentative entity linked to an argument in which it is considered a backing."@en .
+<http://purl.org/spar/amo> <http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/status/published> .
+_:n6fa01680b72a4431a70accdf2b2ea716b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Backing> .
+<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n6fa01680b72a4431a70accdf2b2ea716b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Warrant> .
+<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#label> "backs"@en .
+<http://purl.org/spar/amo> <https://schema.org/image> <https://github.com/SPAROntologies/amo/blob/master/docs/current/amo.png> .
+<http://purl.org/spar/amo/isRebuttalIn> <http://purl.org/vocab/vann/example> "\n    :my-rebuttal \n        amo:isRebuttalIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
+<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/confirms> .
+<http://purl.org/spar/amo/hasClaim> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasClaim :my-claim .\n    " .
+<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/hasEvidence> .
+<http://purl.org/spar/amo/Claim> <http://www.w3.org/2000/01/rdf-schema#label> "claim"@en .
+<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/hasClaim> .
+<http://purl.org/spar/amo/isInvolvedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/proves> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:proves :my-claim .\n\n    :my-claim a amo:Claim .\n    " .
+_:n6fa01680b72a4431a70accdf2b2ea716b58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isRebuttalIn> .
+<http://purl.org/spar/amo/supports> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:supports :my-warrant .\n\n    :my-warrant a amo:Warrant .\n    " .
+_:n6fa01680b72a4431a70accdf2b2ea716b54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b55 .
+<http://purl.org/spar/amo/Claim> <http://www.w3.org/2002/07/owl#equivalentClass> _:n6fa01680b72a4431a70accdf2b2ea716b26 .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/isQualifierIn> <http://purl.org/vocab/vann/example> "\n    :my-qualifier \n        amo:isQualifierIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#comment> "Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications."@en .
+<http://purl.org/spar/amo/Argument> <http://www.w3.org/2000/01/rdf-schema#label> "argument"@en .
+<http://purl.org/spar/amo/involves> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:involves :my-claim, \n            :my-evidence, \n            :my-warrant .\n    " .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier."@en .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2004/02/skos/core#note> "By means of the property chain defined, the assertion that links a warrant to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#range> _:n6fa01680b72a4431a70accdf2b2ea716b33 .
+_:n6fa01680b72a4431a70accdf2b2ea716b54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isBackingIn> .
+<http://purl.org/spar/amo/forces> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo> <http://www.w3.org/2000/01/rdf-schema#label> "Argument Model Ontology (AMO)"@en .
+<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:n6fa01680b72a4431a70accdf2b2ea716b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/hasClaim> .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
+<http://purl.org/spar/amo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "amo"@en .
+<http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/isInvolvedIn> .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Claim> .
+<http://purl.org/spar/amo> <http://purl.org/dc/terms/created> "2011-05-04" .
+_:n6fa01680b72a4431a70accdf2b2ea716b51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b48 .
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:n6fa01680b72a4431a70accdf2b2ea716b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/hasRebuttal> .
+<http://purl.org/spar/amo> <http://purl.org/dc/terms/issued> "2011-05-04" .
+<http://purl.org/spar/amo/forces> <http://www.w3.org/2004/02/skos/core#note> "By means of the property chain defined, the assertion that links a qualifier to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .
+<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni (https://orcid.org/0000-0003-0530-4305)"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/Rebuttal> <http://purl.org/vocab/vann/example> "\n    :my-rebuttal a amo:Rebuttal ;\n        amo:isRebuttalIn :my-argument .\n\n    :my-claim \n        amo:isValidUnless :my-rebuttal .\n    " .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:n6fa01680b72a4431a70accdf2b2ea716b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b42 .
+_:n6fa01680b72a4431a70accdf2b2ea716b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b45 .
+<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n6fa01680b72a4431a70accdf2b2ea716b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b18 .
+<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Qualifier> .
+_:n6fa01680b72a4431a70accdf2b2ea716b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/isInvolvedIn> <http://purl.org/vocab/vann/example> "\n    :my-claim \n        amo:isInvolvedIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
+<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/2000/01/rdf-schema#label> "is warrant in"@en .
+<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/date> "2026-10-05" .
+<http://purl.org/spar/amo/Warrant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument includes an evidence as one of its (mandatory) components."@en .
+<http://purl.org/spar/amo/isInvolvedIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/involves> .
+<http://purl.org/spar/amo/hasWarrant> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasWarrant :my-warrant .\n    " .
+_:n6fa01680b72a4431a70accdf2b2ea716b48 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/hasWarrant> .
+_:n6fa01680b72a4431a70accdf2b2ea716b37 <http://www.w3.org/2002/07/owl#unionOf> _:n6fa01680b72a4431a70accdf2b2ea716b38 .
+<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isDisputedBy> .
+<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n6fa01680b72a4431a70accdf2b2ea716b18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+_:n6fa01680b72a4431a70accdf2b2ea716b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/hasClaim> .
+<http://purl.org/spar/amo/Warrant> <http://purl.org/vocab/vann/example> "\n    :my-warrant a amo:Warrant ;\n        amo:isWarrantIn :my-argument ;\n        amo:leadsTo :my-claim .\n    " .
+_:n6fa01680b72a4431a70accdf2b2ea716b27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/isBackingIn> <http://purl.org/vocab/vann/example> "\n    :my-backing \n        amo:isBackingIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:n6fa01680b72a4431a70accdf2b2ea716b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b32 .
+<http://purl.org/spar/amo/Rebuttal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2002/07/owl#equivalentClass> _:n6fa01680b72a4431a70accdf2b2ea716b9 .
+_:n6fa01680b72a4431a70accdf2b2ea716b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n6fa01680b72a4431a70accdf2b2ea716b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
+_:n6fa01680b72a4431a70accdf2b2ea716b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b12 .
+<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n6fa01680b72a4431a70accdf2b2ea716b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n6fa01680b72a4431a70accdf2b2ea716b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b57 .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:n6fa01680b72a4431a70accdf2b2ea716b30 .
+<http://purl.org/spar/amo/Argument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n6fa01680b72a4431a70accdf2b2ea716b46 .
+<http://purl.org/spar/amo> <https://schema.org/keywords> "argument model"@en .
+<http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/hasRebuttal> .
+<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:n6fa01680b72a4431a70accdf2b2ea716b3 .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b47 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/hasEvidence> .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Warrant> .
+<http://purl.org/spar/amo/isInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is involved in"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b49 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/hasClaim> .
+_:n6fa01680b72a4431a70accdf2b2ea716b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+<http://purl.org/spar/amo> <http://www.w3.org/2002/07/owl#priorVersion> <http://purl.org/spar/amo/2026-09-30> .
+_:n6fa01680b72a4431a70accdf2b2ea716b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n6fa01680b72a4431a70accdf2b2ea716b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/hasRebuttal> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasRebuttal :my-rebuttal .\n    " .
+_:n6fa01680b72a4431a70accdf2b2ea716b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b29 .
+<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/isInvolvedIn> .
+<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/givesBackgroundTo> .
+<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2000/01/rdf-schema#label> "has claim"@en .
+<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument includes a qualifier as one of its (optional) components."@en .
+<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Claim> .
+_:n6fa01680b72a4431a70accdf2b2ea716b47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/amo/isEvidenceIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Claim> .
+<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2000/01/rdf-schema#label> "has rebuttal"@en .
+<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2000/01/rdf-schema#label> "argumentation entity"@en .
+<http://purl.org/spar/amo/forces> <http://purl.org/vocab/vann/example> "\n    :my-qualifier a amo:Qualifier ;\n        amo:forces :my-claim .\n\n    :my-claim a amo:Claim .\n    " .
+<http://purl.org/spar/amo/isClaimIn> <http://purl.org/vocab/vann/example> "\n    :my-claim \n        amo:isClaimIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
+_:n6fa01680b72a4431a70accdf2b2ea716b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b41 .
+_:n6fa01680b72a4431a70accdf2b2ea716b30 <http://www.w3.org/2002/07/owl#unionOf> _:n6fa01680b72a4431a70accdf2b2ea716b31 .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/spar/amo"@en .
+<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
+<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument includes a backing as one of its (optional) components."@en .
+<http://purl.org/spar/amo/hasEvidence> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasEvidence :my-evidence .\n    " .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n6fa01680b72a4431a70accdf2b2ea716b52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/contributor> "Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Evidence> .
+<http://purl.org/spar/amo> <https://schema.org/keywords> "scholarly publishing"@en .
+<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/qualifies> .
+<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/backs> <http://purl.org/vocab/vann/example> "\n    :my-backing a amo:Backing ;\n        amo:backs :my-warrant .\n\n    :my-warrant a amo:Warrant .\n    " .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentation entity relates to another one in some way - for example, it is the evidence that is used to prove a claim of an argument."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isClaimIn> .
+<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:n6fa01680b72a4431a70accdf2b2ea716b26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n6fa01680b72a4431a70accdf2b2ea716b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Qualifier> .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentative entity linked to an argument in which it is considered a claim."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+_:n6fa01680b72a4431a70accdf2b2ea716b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b43 .
+_:n6fa01680b72a4431a70accdf2b2ea716b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b2 .
+<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/isClaimIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:n6fa01680b72a4431a70accdf2b2ea716b51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b52 .
+_:n6fa01680b72a4431a70accdf2b2ea716b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b8 .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#label> "involves"@en .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
+<http://purl.org/spar/amo/isInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentation entity involved in the presentation of an argument."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Claim> .
+_:n6fa01680b72a4431a70accdf2b2ea716b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/Argument> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasClaim :my-claim ;\n        amo:hasEvidence :my-evidence ;\n        amo:hasWarrant :my-warrant ;\n        amo:hasBacking :my-backing ;\n        amo:hasQualifier :my-qualifier ;\n        amo:hasRebuttal :my-rebuttal .\n    " .
+<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2000/01/rdf-schema#label> "warrant"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b9 <http://www.w3.org/2002/07/owl#intersectionOf> _:n6fa01680b72a4431a70accdf2b2ea716b11 .
+_:n6fa01680b72a4431a70accdf2b2ea716b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Backing> .
+<http://purl.org/spar/amo/forces> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Claim> .
+_:n6fa01680b72a4431a70accdf2b2ea716b50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b47 .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/Warrant> .
+<http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentative entity linked to an argument in which it is considered a rebuttal."@en .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:n6fa01680b72a4431a70accdf2b2ea716b5 .
+_:n6fa01680b72a4431a70accdf2b2ea716b47 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/spar/amo/leadsTo> <http://purl.org/vocab/vann/example> "\n    :my-warrant a amo:Warrant ;\n        amo:leadsTo :my-claim .\n\n    :my-claim a amo:Claim ." .
+<http://purl.org/spar/amo/backs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo> <http://purl.org/vocab/vann/changes> <https://github.com/SPAROntologies/amo/blob/master/CHANGELOG.md> .
+<http://purl.org/spar/amo/hasEvidence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
+_:n6fa01680b72a4431a70accdf2b2ea716b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isQualifierIn> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:n6fa01680b72a4431a70accdf2b2ea716b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/hasClaim> .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:n6fa01680b72a4431a70accdf2b2ea716b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isEvidenceIn> .
+<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/Qualifier> <http://purl.org/vocab/vann/example> "\n    :my-qualifier a amo:Qualifier ;\n        amo:isQualifierIn :my-argument ;\n        amo:forces :my-claim .\n    " .
+<http://purl.org/spar/amo> <https://schema.org/codeRepository> <https://github.com/SPAROntologies/amo> .
+<http://purl.org/spar/amo> <https://schema.org/keywords> "Semantic Publishing and Referencing Ontologies"@en .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:n6fa01680b72a4431a70accdf2b2ea716b7 .
+<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
+<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/spar/amo/Warrant> <http://www.w3.org/2000/01/rdf-schema#comment> "A statement bridging from the evidence to the claim - e.g., 'An ontology developed in OWL is a consistent OWL ontology'.\n"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n6fa01680b72a4431a70accdf2b2ea716b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/amo> <https://schema.org/keywords> "scientometrics"@en .
+<http://purl.org/spar/amo/involves> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
+_:n6fa01680b72a4431a70accdf2b2ea716b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#label> "proves"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b20 .
+<http://purl.org/spar/amo> <https://schema.org/keywords> "bibliometrics"@en .
+<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo> <http://purl.org/dc/terms/modified> "2026-10-05" .
+_:n6fa01680b72a4431a70accdf2b2ea716b10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isBackingIn> .
+<http://purl.org/spar/amo/forces> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:n6fa01680b72a4431a70accdf2b2ea716b1 .
+_:n6fa01680b72a4431a70accdf2b2ea716b49 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/spar/amo> <http://purl.org/dc/elements/1.1/creator> "Fabio Vitali (https://orcid.org/0000-0002-7562-5203)"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2000/01/rdf-schema#label> "has qualifier"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/isWarrantIn> <http://purl.org/vocab/vann/example> "\n    :my-warrant \n        amo:isWarrantIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
+<http://purl.org/spar/amo/supports> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/givesSupportTo> .
+<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2000/01/rdf-schema#label> "qualifier"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isQualifierIn> .
+<http://purl.org/spar/amo/hasQualifier> <http://purl.org/vocab/vann/example> "\n    :my-argument a amo:Argument ;\n        amo:hasQualifier :my-qualifier .\n    " .
+<http://purl.org/spar/amo/Backing> <http://purl.org/vocab/vann/example> "\n    :my-backing a amo:Backing ;\n        amo:isBackingIn :my-argument ;\n        amo:backs :my-warrant .\n    " .
+<http://purl.org/spar/amo> <https://schema.org/includedInDataCatalog> <https://fairsharing.org/> .
+_:n6fa01680b72a4431a70accdf2b2ea716b13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n6fa01680b72a4431a70accdf2b2ea716b59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/isWarrantIn> .
+_:n6fa01680b72a4431a70accdf2b2ea716b27 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/amo/isClaimIn> .
+<http://purl.org/spar/amo/leadsTo> <http://www.w3.org/2000/01/rdf-schema#label> "leads to"@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Qualifier> .
+<http://purl.org/spar/amo/ArgumentationEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/hasBacking> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n6fa01680b72a4431a70accdf2b2ea716b14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/isInvolvedIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo> <http://xmlns.com/foaf/0.1/logo> <https://github.com/SPAROntologies/sparontologies.github.io/blob/master/static/img/spar/spar-logo.png> .
+<http://purl.org/spar/amo> <http://purl.org/dc/terms/publisher> <https://ror.org/00wb4mk85> .
+<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/2002/07/owl#equivalentClass> _:n6fa01680b72a4431a70accdf2b2ea716b21 .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:n6fa01680b72a4431a70accdf2b2ea716b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An sentence or word linked to an argument with the scope of qualifying the argument claim."@en .
+<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/Backing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2000/01/rdf-schema#comment> "A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'."@en .
+<http://purl.org/spar/amo/isBackingIn> <http://www.w3.org/2000/01/rdf-schema#label> "is backing in"@en .
+<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/involves> .
+<http://purl.org/spar/amo/hasQualifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo> <http://purl.org/dc/terms/source> <https://github.com/SPAROntologies/amo/blob/master/docs/cq.md> .
+<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n6fa01680b72a4431a70accdf2b2ea716b29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6fa01680b72a4431a70accdf2b2ea716b27 .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2004/02/skos/core#note> "By means of the property chain defined, the assertion that links an evidence to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .
+<http://purl.org/spar/amo/Qualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/amo/Argument> .
+<http://purl.org/spar/amo/isEvidenceIn> <http://purl.org/vocab/vann/example> "\n    :my-evidence \n        amo:isEvidenceIn :my-argument .\n\n    :my-argument a amo:Argument .\n    " .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/ArgumentationEntity> .
+<http://purl.org/spar/amo/hasRebuttal> <http://www.w3.org/2000/01/rdf-schema#comment> "An argument includes a rebuttal as one of its (optional) components."@en .
+_:n6fa01680b72a4431a70accdf2b2ea716b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo> <https://schema.org/keywords> "SPAR Ontologies"@en .
+<http://purl.org/spar/amo/hasWarrant> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/isInvolvedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/isInvolvedIn> .
+<http://purl.org/spar/amo/isWarrantIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentative entity linked to an argument in which it is considered a warrant."@en .
+<http://purl.org/spar/amo/isRebuttalIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/forces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/Claim> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/hasClaim> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo/backs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/amo/relatesTo> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedAsEvidenceBy> .
+<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/amo/hasQualifier> .
+_:n6fa01680b72a4431a70accdf2b2ea716b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+<http://purl.org/spar/amo/Argument> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo> <http://purl.org/ontology/bibo/doi> "TBA" .
+<http://purl.org/spar/amo/Evidence> <http://www.w3.org/2002/07/owl#equivalentClass> _:n6fa01680b72a4431a70accdf2b2ea716b17 .
+_:n6fa01680b72a4431a70accdf2b2ea716b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/amo/isQualifierIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/amo/isValidUnless> <http://www.w3.org/2000/01/rdf-schema#comment> "A claim that is restricted by a rebuttal of an argument."@en .
+<http://purl.org/spar/amo/Evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/proves> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/amo> <https://schema.org/keywords> "semantic publishing"@en .

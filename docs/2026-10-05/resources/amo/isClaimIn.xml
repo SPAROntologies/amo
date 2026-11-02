@@ -6,47 +6,47 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b58">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isRebuttalIn"/>
-    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b59"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/amo/isClaimIn">
-    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered a claim.</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasClaim"/>
     <vann:example>
     :my-claim 
         amo:isClaimIn :my-argument .
 
     :my-argument a amo:Argument .
     </vann:example>
+    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered a claim.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
     <rdfs:label xml:lang="en">is claim in</rdfs:label>
-    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasClaim"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b57">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isQualifierIn"/>
-    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b58"/>
+  <rdf:Description rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b58">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isRebuttalIn"/>
+    <rdf:rest rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b59"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b53">
+  <rdf:Description rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b53">
+    <owl:members rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b54"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
-    <owl:members rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b54"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b54">
+  <rdf:Description rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b54">
+    <rdf:rest rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b55"/>
     <rdf:first rdf:resource="http://purl.org/spar/amo/isBackingIn"/>
-    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b55"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b55">
+  <rdf:Description rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b55">
     <rdf:first rdf:resource="http://purl.org/spar/amo/isClaimIn"/>
-    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b56"/>
+    <rdf:rest rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b56"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b59">
+  <rdf:Description rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b57">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isQualifierIn"/>
+    <rdf:rest rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b58"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b56">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isEvidenceIn"/>
+    <rdf:rest rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b57"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b59">
     <rdf:first rdf:resource="http://purl.org/spar/amo/isWarrantIn"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b56">
-    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b57"/>
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isEvidenceIn"/>
   </rdf:Description>
 </rdf:RDF>

@@ -7,32 +7,32 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b34">
-    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b35"/>
-    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
+  <rdf:Description rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b35">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Qualifier"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/amo/involves">
-    <rdfs:label xml:lang="en">involves</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier.</rdfs:comment>
     <vann:example>
     :my-argument a amo:Argument ;
         amo:involves :my-claim, 
             :my-evidence, 
             :my-warrant .
     </vann:example>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
-    <rdfs:comment xml:lang="en">An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier.</rdfs:comment>
+    <rdfs:range rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b33"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
     <skos:note xml:lang="en">This property and its sub-properties serve to describe an argument from an high-level perspective (i.e., which argumentation entities take part in it and what role they hold) rather than from a factual point of view (i.e., how argumentation entities are inter-linked between them).</skos:note>
-    <rdfs:range rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b33"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">involves</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b35">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://purl.org/spar/amo/Qualifier"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b33">
-    <owl:unionOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b34"/>
+  <rdf:Description rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b33">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b34">
+    <rdf:rest rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b35"/>
+    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
   </rdf:Description>
 </rdf:RDF>
