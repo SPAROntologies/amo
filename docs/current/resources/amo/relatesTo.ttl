@@ -6,8 +6,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
-amo:relatesTo a owl:ObjectProperty,
-        owl:SymmetricProperty ;
+amo:relatesTo a owl:ObjectProperty ;
     rdfs:label "relates to"@en ;
     vann:example """
     :my-evidence a amo:Evidence ;

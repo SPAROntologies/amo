@@ -6,17 +6,17 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/amo/hasWarrant">
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <rdfs:comment xml:lang="en">An argument includes a warrant as one of its (mandatory) components.</rdfs:comment>
     <vann:example>
     :my-argument a amo:Argument ;
         amo:hasWarrant :my-warrant .
     </vann:example>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
     <rdfs:label xml:lang="en">has warrant</rdfs:label>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
     <rdfs:range rdf:resource="http://purl.org/spar/amo/Warrant"/>
-    <rdfs:comment xml:lang="en">An argument includes a warrant as one of its (mandatory) components.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
 </rdf:RDF>

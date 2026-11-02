@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b48">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/hasWarrant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b49">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/hasClaim"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b50">
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b51"/>
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b47"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/Argument">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <vann:example>
+    :my-argument a amo:Argument ;
+        amo:hasClaim :my-claim ;
+        amo:hasEvidence :my-evidence ;
+        amo:hasWarrant :my-warrant ;
+        amo:hasBacking :my-backing ;
+        amo:hasQualifier :my-qualifier ;
+        amo:hasRebuttal :my-rebuttal .
+    </vann:example>
+    <rdfs:label xml:lang="en">argument</rdfs:label>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b46"/>
+    <rdfs:comment xml:lang="en">
+An argument, or practical argument according to the 'Toulmin model of argument', focuses on the justificatory function of argumentation: practical arguments first find a claim of interest, and then provide justification for it.
+
+Each argument must be analyzed according to six interrelated components: claim, evidence, warrant, backing, rebuttal and qualifier. 
+The first three elements, 'claim', 'data' and 'warrant', are considered as the essential components of practical arguments, while the second triad, 'qualifier', 'backing', and 'rebuttal', may not be needed in some arguments.
+</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b51">
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b48"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b52"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b52">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b46">
+    <owl:intersectionOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b50"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b47">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/hasEvidence"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+</rdf:RDF>

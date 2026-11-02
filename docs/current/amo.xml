@@ -12,234 +12,13 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:about="http://purl.org/spar/amo/forces">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">forces</rdfs:label>
-    <skos:note xml:lang="en">By means of the property chain defined, the assertion that links a qualifier to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties).</skos:note>
-    <rdfs:comment xml:lang="en">A qualifier that expresses as degree of force concerning a claim of an argument.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Qualifier"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/Claim"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/relatesTo"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/qualifies"/>
-    <owl:propertyChainAxiom rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b1"/>
-    <vann:example>
-    :my-qualifier a amo:Qualifier ;
-        amo:forces :my-claim .
-
-    :my-claim a amo:Claim .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b50">
-    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b47"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b51"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/isBackingIn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">is backing in</rdfs:label>
-    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered a backing.</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
-    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasBacking"/>
-    <vann:example>
-    :my-backing 
-        amo:isBackingIn :my-argument .
-
-    :my-argument a amo:Argument .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b27">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isClaimIn"/>
-    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b21">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isQualifierIn"/>
-    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b54">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isBackingIn"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b55"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/relatesTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    <rdfs:label xml:lang="en">relates to</rdfs:label>
-    <rdfs:comment xml:lang="en">An argumentation entity relates to another one in some way - for example, it is the evidence that is used to prove a claim of an argument.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b30"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
-    <vann:example>
-    :my-evidence a amo:Evidence ;
-        amo:relatesTo :my-claim .
-
-    :my-claim a amo:Claim .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b49">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-    <owl:onProperty rdf:resource="http://purl.org/spar/amo/hasClaim"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/Backing">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">backing</rdfs:label>
-    <rdfs:comment xml:lang="en">Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications.</rdfs:comment>
-    <owl:equivalentClass rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b9"/>
-    <vann:example>
-    :my-backing a amo:Backing ;
-        amo:isBackingIn :my-argument ;
-        amo:backs :my-warrant .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b44">
-    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b37"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b45"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/hasEvidence">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">has evidence</rdfs:label>
-    <rdfs:comment xml:lang="en">An argument includes an evidence as one of its (mandatory) components.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/Evidence"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
-    <vann:example>
-    :my-argument a amo:Argument ;
-        amo:hasEvidence :my-evidence .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b47">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="http://purl.org/spar/amo/hasEvidence"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b59">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isWarrantIn"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/isClaimIn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">is claim in</rdfs:label>
-    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered a claim.</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
-    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasClaim"/>
-    <vann:example>
-    :my-claim 
-        amo:isClaimIn :my-argument .
-
-    :my-argument a amo:Argument .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/hasBacking">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">has backing</rdfs:label>
-    <rdfs:comment xml:lang="en">An argument includes a backing as one of its (optional) components.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/Backing"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
-    <vann:example>
-    :my-argument a amo:Argument ;
-        amo:hasBacking :my-backing .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/leadsTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">leads to</rdfs:label>
-    <skos:note xml:lang="en">A warrant that points to a claim from the related evidence within an argument.</skos:note>
-    <skos:note xml:lang="en">By means of the property chain defined, the assertion that links a warrant to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties).</skos:note>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Warrant"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/Claim"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/relatesTo"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/confirms"/>
-    <owl:propertyChainAxiom rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b5"/>
-    <vann:example>
-    :my-warrant a amo:Warrant ;
-        amo:leadsTo :my-claim .
-
-    :my-claim a amo:Claim .</vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/hasRebuttal">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">has rebuttal</rdfs:label>
-    <rdfs:comment xml:lang="en">An argument includes a rebuttal as one of its (optional) components.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/Rebuttal"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
-    <vann:example>
-    :my-argument a amo:Argument ;
-        amo:hasRebuttal :my-rebuttal .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/supports">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">supports</rdfs:label>
-    <rdfs:comment xml:lang="en">An evidence that supports a warrant of an argument.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Evidence"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/Warrant"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/relatesTo"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/givesSupportTo"/>
-    <vann:example>
-    :my-evidence a amo:Evidence ;
-        amo:supports :my-warrant .
-
-    :my-warrant a amo:Warrant .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b42">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/Warrant"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/isValidUnless">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">is valid unless</rdfs:label>
-    <skos:note xml:lang="en">By means of the property chain defined, the assertion that links a claim to the relative rebuttal is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties).</skos:note>
-    <rdfs:comment xml:lang="en">A claim that is restricted by a rebuttal of an argument.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Claim"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/Rebuttal"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/relatesTo"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isDisputedBy"/>
-    <owl:propertyChainAxiom rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b3"/>
-    <vann:example>
-    :my-claim a amo:Claim ;
-        amo:isValidUnless :my-rebuttal .
-
-    :my-rebuttal a amo:Rebuttal .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b36">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b44"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/amo">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <rdfs:label xml:lang="en">Argument Model Ontology (AMO)</rdfs:label>
+    <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)</dc:contributor>
     <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fabio Vitali (https://orcid.org/0000-0002-7562-5203)</dc:creator>
     <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni (https://orcid.org/0000-0003-0530-4305)</dc:creator>
-    <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)</dc:contributor>
-    <dc:date>2026-09-30</dc:date>
+    <dc:date>2026-10-05</dc:date>
     <dc:description xml:lang="en">
 The **_Argument Model Ontology (AMO)_** is an OWL 2 DL ontology that aims to encode the [Toulmin's theory](https://doi.org/10.1017/CBO9780511840005) through OWL classes and properties, in order to describe a web of inter-linked entities that participate, with a specific role, in one or more arguments.
 
@@ -265,8 +44,8 @@ In the following subsections, we introduce some examples to showcase how to use 
 
 The prefixes that are used in all the examples provided below are defined as follows:
 
+    @prefix : &lt;http://www.sparontologies.net/example/&gt; .
     @prefix amo: &lt;http://purl.org/spar/amo/&gt; .
-    @prefix : &lt;http://example.org/&gt; .
 
 ### Describing the components of an argument
 
@@ -311,8 +90,8 @@ In the following subsections, some of them are introduced together with their re
 
 The prefixes that are used in all the SPARQL queries provided below are defined as follows:
 
+    PREFIX : &lt;http://www.sparontologies.net/example/&gt;
     PREFIX amo: &lt;http://purl.org/spar/amo/&gt;
-    PREFIX : &lt;http://example.org/&gt;
     PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 
 ### CQ1
@@ -347,80 +126,594 @@ What is the degree of force of a given claim, and under which rebuttals is it no
 
 </dc:description>
     <dc:title xml:lang="en">The Argument Model Ontology (AMO)</dc:title>
-    <owl:imports rdf:resource="http://purl.org/spar/cito/"/>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0.1</owl:versionInfo>
-    <dcterms:bibliographicCitation>Peroni, S., Tomasi, F., Vitali, F., &amp; Zingoni, J. (2013, January). Semantic lenses as exploration method for scholarly articles. In Italian Research Conference on Digital Libraries (pp. 118-129). Berlin, Heidelberg: Springer Berlin Heidelberg. DOI: https://doi.org/10.1007/978-3-642-54347-0_13.</dcterms:bibliographicCitation>
+    <dcterms:bibliographicCitation>Peroni, S., Tomasi, F., Vitali, F., Zingoni, J. (2014). Semantic Lenses as Exploration Method for Scholarly Articles. In: Catarci, T., Ferro, N., Poggi, A. (eds) Bridging Between Cultural Heritage Institutions. IRCDL 2013. Communications in Computer and Information Science, vol 385. Springer, Berlin, Heidelberg. https://doi.org/10.1007/978-3-642-54347-0_13.</dcterms:bibliographicCitation>
     <dcterms:created>2011-05-04</dcterms:created>
     <dcterms:issued>2011-05-04</dcterms:issued>
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-    <dcterms:modified>2026-09-30</dcterms:modified>
+    <dcterms:modified>2026-10-05</dcterms:modified>
     <dcterms:publisher rdf:resource="https://ror.org/00wb4mk85"/>
     <dcterms:source rdf:resource="https://github.com/SPAROntologies/amo/blob/master/docs/cq.md"/>
     <bibo:doi>TBA</bibo:doi>
     <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/published"/>
     <vann:preferredNamespacePrefix xml:lang="en">amo</vann:preferredNamespacePrefix>
     <vann:preferredNamespaceUri xml:lang="en">http://purl.org/spar/amo</vann:preferredNamespaceUri>
-    <owl:backwardCompatibleWith rdf:resource="http://purl.org/spar/amo/2011-05-04"/>
-    <owl:priorVersion rdf:resource="http://purl.org/spar/amo/2011-05-04"/>
-    <owl:versionIRI rdf:resource="http://purl.org/spar/amo/2026-09-30"/>
-    <foaf:logo rdf:resource="https://github.com/SPAROntologies/amo/blob/master/spar.png"/>
+    <owl:backwardCompatibleWith rdf:resource="http://purl.org/spar/amo/2026-09-30"/>
+    <owl:imports rdf:resource="http://purl.org/spar/cito/"/>
+    <owl:priorVersion rdf:resource="http://purl.org/spar/amo/2026-09-30"/>
+    <owl:versionIRI rdf:resource="http://purl.org/spar/amo/2026-10-05"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0.2</owl:versionInfo>
+    <vann:changes rdf:resource="https://github.com/SPAROntologies/amo/blob/master/CHANGELOG.md"/>
+    <foaf:logo rdf:resource="https://github.com/SPAROntologies/sparontologies.github.io/blob/master/static/img/spar/spar-logo.png"/>
     <schema:codeRepository rdf:resource="https://github.com/SPAROntologies/amo"/>
     <schema:image rdf:resource="https://github.com/SPAROntologies/amo/blob/master/docs/current/amo.png"/>
     <schema:image rdf:resource="https://github.com/SPAROntologies/amo/blob/master/docs/current/argument.png"/>
     <schema:includedInDataCatalog rdf:resource="https://fairsharing.org/"/>
-    <schema:keywords xml:lang="en">bibliometrics</schema:keywords>
+    <dc:language rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
+    <schema:keywords xml:lang="en">SPAR Ontologies</schema:keywords>
+    <schema:keywords xml:lang="en">Semantic Publishing and Referencing Ontologies</schema:keywords>
     <schema:keywords xml:lang="en">argument model</schema:keywords>
+    <schema:keywords xml:lang="en">bibliometrics</schema:keywords>
     <schema:keywords xml:lang="en">scholarly publishing</schema:keywords>
     <schema:keywords xml:lang="en">scientometrics</schema:keywords>
     <schema:keywords xml:lang="en">semantic publishing</schema:keywords>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b56">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isEvidenceIn"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b57"/>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b58">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isRebuttalIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b59"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b49">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/hasClaim"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b4">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/hasRebuttal"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/amo/Evidence">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">evidence</rdfs:label>
-    <rdfs:comment xml:lang="en">A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'.</rdfs:comment>
-    <owl:equivalentClass rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b17"/>
     <vann:example>
     :my-evidence a amo:Evidence ;
         amo:isEvidenceIn :my-argument ;
         amo:proves :my-claim .
     </vann:example>
+    <rdfs:comment xml:lang="en">A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <owl:equivalentClass rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b17"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b51">
-    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b48"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b52"/>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isBackingIn"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/isInvolvedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is involved in</rdfs:label>
+    <vann:example>
+    :my-claim 
+        amo:isInvolvedIn :my-argument .
+
+    :my-argument a amo:Argument .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argumentation entity involved in the presentation of an argument.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/involves"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/isValidUnless">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is valid unless</rdfs:label>
+    <vann:example>
+    :my-claim a amo:Claim ;
+        amo:isValidUnless :my-rebuttal .
+
+    :my-rebuttal a amo:Rebuttal .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A claim that is restricted by a rebuttal of an argument.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Claim"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/Rebuttal"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/relatesTo"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isDisputedBy"/>
+    <owl:propertyChainAxiom rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b3"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">By means of the property chain defined, the assertion that links a claim to the relative rebuttal is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties).</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b38">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Backing"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b39"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/isEvidenceIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is evidence in</rdfs:label>
+    <vann:example>
+    :my-evidence 
+        amo:isEvidenceIn :my-argument .
+
+    :my-argument a amo:Argument .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered an evidence.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasEvidence"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b30">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b31"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/Backing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">backing</rdfs:label>
+    <vann:example>
+    :my-backing a amo:Backing ;
+        amo:isBackingIn :my-argument ;
+        amo:backs :my-warrant .
+    </vann:example>
+    <rdfs:comment xml:lang="en">Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <owl:equivalentClass rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b9"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b17">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b34">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b35"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/isWarrantIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is warrant in</rdfs:label>
+    <vann:example>
+    :my-warrant 
+        amo:isWarrantIn :my-argument .
+
+    :my-argument a amo:Argument .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered a warrant.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasWarrant"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/involves">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">involves</rdfs:label>
+    <vann:example>
+    :my-argument a amo:Argument ;
+        amo:involves :my-claim, 
+            :my-evidence, 
+            :my-warrant .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b33"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">This property and its sub-properties serve to describe an argument from an high-level perspective (i.e., which argumentation entities take part in it and what role they hold) rather than from a factual point of view (i.e., how argumentation entities are inter-linked between them).</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/isRebuttalIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is rebuttal in</rdfs:label>
+    <vann:example>
+    :my-rebuttal 
+        amo:isRebuttalIn :my-argument .
+
+    :my-argument a amo:Argument .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered a rebuttal.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasRebuttal"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/Qualifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">qualifier</rdfs:label>
+    <vann:example>
+    :my-qualifier a amo:Qualifier ;
+        amo:isQualifierIn :my-argument ;
+        amo:forces :my-claim .
+    </vann:example>
+    <rdfs:comment xml:lang="en">Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <owl:equivalentClass rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b21"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b39">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Claim"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b40"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/proves">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">proves</rdfs:label>
+    <vann:example>
+    :my-evidence a amo:Evidence ;
+        amo:proves :my-claim .
+
+    :my-claim a amo:Claim .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An evidence that founds a claim of an argument.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Evidence"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/Claim"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/relatesTo"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedAsEvidenceBy"/>
+    <owl:propertyChainAxiom rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b7"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">By means of the property chain defined, the assertion that links an evidence to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties).</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b52">
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b49"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b12">
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b10"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b1">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isQualifierIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isRebuttalIn"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/isClaimIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is claim in</rdfs:label>
+    <vann:example>
+    :my-claim 
+        amo:isClaimIn :my-argument .
+
+    :my-argument a amo:Argument .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered a claim.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasClaim"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/hasEvidence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has evidence</rdfs:label>
+    <vann:example>
+    :my-argument a amo:Argument ;
+        amo:hasEvidence :my-evidence .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argument includes an evidence as one of its (mandatory) components.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/Evidence"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b23">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isWarrantIn"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b57">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isQualifierIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b58"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/leadsTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">leads to</rdfs:label>
+    <vann:example>
+    :my-warrant a amo:Warrant ;
+        amo:leadsTo :my-claim .
+
+    :my-claim a amo:Claim .</vann:example>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Warrant"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/Claim"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/relatesTo"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/confirms"/>
+    <owl:propertyChainAxiom rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b5"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">A warrant that points to a claim from the related evidence within an argument.</skos:note>
+    <skos:note xml:lang="en">By means of the property chain defined, the assertion that links a warrant to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties).</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isEvidenceIn"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b40">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Evidence"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b41"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/backs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">backs</rdfs:label>
+    <vann:example>
+    :my-backing a amo:Backing ;
+        amo:backs :my-warrant .
+
+    :my-warrant a amo:Warrant .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A backing that attests the warrant of an argument.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Backing"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/Warrant"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/relatesTo"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/givesBackgroundTo"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b25">
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b23"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/Claim">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">claim</rdfs:label>
+    <vann:example>
+    :my-claim a amo:Claim ;
+        amo:isClaimIn :my-argument ;
+        amo:isValidUnless :my-rebuttal .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A fact that must be established - e.g., 'This is a consistent OWL ontology'.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <owl:equivalentClass rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b26"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/supports">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">supports</rdfs:label>
+    <vann:example>
+    :my-evidence a amo:Evidence ;
+        amo:supports :my-warrant .
+
+    :my-warrant a amo:Warrant .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An evidence that supports a warrant of an argument.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Evidence"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/Warrant"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/relatesTo"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/givesSupportTo"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b54">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isBackingIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b55"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/isQualifierIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is qualifier in</rdfs:label>
+    <vann:example>
+    :my-qualifier 
+        amo:isQualifierIn :my-argument .
+
+    :my-argument a amo:Argument .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An sentence or word linked to an argument with the scope of qualifying the argument claim.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasQualifier"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b53">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+    <owl:members rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b56">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isEvidenceIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b57"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b43">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/hasClaim">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has claim</rdfs:label>
+    <vann:example>
+    :my-argument a amo:Argument ;
+        amo:hasClaim :my-claim .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argument includes a claim as one of its (mandatory) components.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/Claim"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/isBackingIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is backing in</rdfs:label>
+    <vann:example>
+    :my-backing 
+        amo:isBackingIn :my-argument .
+
+    :my-argument a amo:Argument .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered a backing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasBacking"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/amo/ArgumentationEntity">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">argumentation entity</rdfs:label>
-    <rdfs:comment xml:lang="en">An entity that takes part in an argument according to the 'Toulmin model of argument'.</rdfs:comment>
-    <owl:equivalentClass rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b36"/>
     <vann:example>
     :my-claim a amo:ArgumentationEntity ;
         amo:isInvolvedIn :my-argument .
     </vann:example>
+    <rdfs:comment xml:lang="en">An entity that takes part in an argument according to the 'Toulmin model of argument'.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <owl:equivalentClass rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b36"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b13">
+  <rdf:Description rdf:about="http://purl.org/spar/amo/hasRebuttal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has rebuttal</rdfs:label>
+    <vann:example>
+    :my-argument a amo:Argument ;
+        amo:hasRebuttal :my-rebuttal .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argument includes a rebuttal as one of its (optional) components.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/Rebuttal"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b48">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/hasWarrant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b7">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isEvidenceIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/hasQualifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has qualifier</rdfs:label>
+    <vann:example>
+    :my-argument a amo:Argument ;
+        amo:hasQualifier :my-qualifier .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argument includes a qualifier as one of its (optional) components.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/Qualifier"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b32">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Qualifier"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b3">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isClaimIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b59">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isWarrantIn"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b47">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/hasEvidence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/Rebuttal">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b15"/>
+    <rdfs:label xml:lang="en">rebuttal</rdfs:label>
+    <vann:example>
+    :my-rebuttal a amo:Rebuttal ;
+        amo:isRebuttalIn :my-argument .
+
+    :my-claim 
+        amo:isValidUnless :my-rebuttal .
+    </vann:example>
+    <rdfs:comment xml:lang="en">Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <owl:equivalentClass rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b13"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/forces">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">forces</rdfs:label>
+    <vann:example>
+    :my-qualifier a amo:Qualifier ;
+        amo:forces :my-claim .
+
+    :my-claim a amo:Claim .
+    </vann:example>
+    <rdfs:comment xml:lang="en">A qualifier that expresses as degree of force concerning a claim of an argument.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Qualifier"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/Claim"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/relatesTo"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/qualifies"/>
+    <owl:propertyChainAxiom rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b1"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">By means of the property chain defined, the assertion that links a qualifier to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties).</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b6">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/hasClaim"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b24">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b25"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b51">
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b48"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b52"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b19">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b26">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b28"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/relatesTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">relates to</rdfs:label>
+    <vann:example>
+    :my-evidence a amo:Evidence ;
+        amo:relatesTo :my-claim .
+
+    :my-claim a amo:Claim .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argumentation entity relates to another one in some way - for example, it is the evidence that is used to prove a claim of an argument.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b30"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b28">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b29"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b33">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b44">
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b37"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b45"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b35">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Qualifier"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/amo/Argument">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">argument</rdfs:label>
-    <rdfs:comment xml:lang="en">
-An argument, or practical argument according to the 'Toulmin model of argument', focuses on the justificatory function of argumentation: practical arguments first find a claim of interest, and then provide justification for it.
-
-Each argument must be analyzed according to six interrelated components: claim, evidence, warrant, backing, rebuttal and qualifier. 
-The first three elements, 'claim', 'data' and 'warrant', are considered as the essential components of practical arguments, while the second triad, 'qualifier', 'backing', and 'rebuttal', may not be needed in some arguments.
-</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b46"/>
     <vann:example>
     :my-argument a amo:Argument ;
         amo:hasClaim :my-claim ;
@@ -430,437 +723,147 @@ The first three elements, 'claim', 'data' and 'warrant', are considered as the e
         amo:hasQualifier :my-qualifier ;
         amo:hasRebuttal :my-rebuttal .
     </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b26">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b28"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/hasQualifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">has qualifier</rdfs:label>
-    <rdfs:comment xml:lang="en">An argument includes a qualifier as one of its (optional) components.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/Qualifier"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
-    <vann:example>
-    :my-argument a amo:Argument ;
-        amo:hasQualifier :my-qualifier .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/backs">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">backs</rdfs:label>
-    <rdfs:comment xml:lang="en">A backing that attests the warrant of an argument.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Backing"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/Warrant"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/relatesTo"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/givesBackgroundTo"/>
-    <vann:example>
-    :my-backing a amo:Backing ;
-        amo:backs :my-warrant .
+    <rdfs:comment xml:lang="en">
+An argument, or practical argument according to the 'Toulmin model of argument', focuses on the justificatory function of argumentation: practical arguments first find a claim of interest, and then provide justification for it.
 
-    :my-warrant a amo:Warrant .
-    </vann:example>
+Each argument must be analyzed according to six interrelated components: claim, evidence, warrant, backing, rebuttal and qualifier. 
+The first three elements, 'claim', 'data' and 'warrant', are considered as the essential components of practical arguments, while the second triad, 'qualifier', 'backing', and 'rebuttal', may not be needed in some arguments.
+</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:subClassOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b46"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b39">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/Claim"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b40"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b52">
-    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b49"/>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b42">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/Warrant"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/involves">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">involves</rdfs:label>
-    <skos:note xml:lang="en">This property and its sub-properties serve to describe an argument from an high-level perspective (i.e., which argumentation entities take part in it and what role they hold) rather than from a factual point of view (i.e., how argumentation entities are inter-linked between them).</skos:note>
-    <rdfs:comment xml:lang="en">An argument involves an argumentation entity (claim, evidence, warrant, backing, rebuttal) or a qualifier.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
-    <rdfs:range rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b33"/>
-    <vann:example>
-    :my-argument a amo:Argument ;
-        amo:involves :my-claim, 
-            :my-evidence, 
-            :my-warrant .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b5">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isWarrantIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b6"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b12">
-    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b10"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/isQualifierIn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">is qualifier in</rdfs:label>
-    <rdfs:comment xml:lang="en">An sentence or word linked to an argument with the scope of qualifying the argument claim.</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
-    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasQualifier"/>
-    <vann:example>
-    :my-qualifier 
-        amo:isQualifierIn :my-argument .
-
-    :my-argument a amo:Argument .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b55">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isClaimIn"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b56"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b3">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isClaimIn"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b4"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b34">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b35"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/isInvolvedIn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">is involved in</rdfs:label>
-    <rdfs:comment xml:lang="en">An argumentation entity involved in the presentation of an argument.</rdfs:comment>
-    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/involves"/>
-    <vann:example>
-    :my-claim 
-        amo:isInvolvedIn :my-argument .
-
-    :my-argument a amo:Argument .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b10">
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b21">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isBackingIn"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isQualifierIn"/>
     <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b45">
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b43"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/amo/hasBacking">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has backing</rdfs:label>
+    <vann:example>
+    :my-argument a amo:Argument ;
+        amo:hasBacking :my-backing .
+    </vann:example>
+    <rdfs:comment xml:lang="en">An argument includes a backing as one of its (optional) components.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/Backing"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b11">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b12"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/amo/Warrant">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">warrant</rdfs:label>
-    <rdfs:comment xml:lang="en">A statement bridging from the evidence to the claim - e.g., 'An ontology developed in OWL is a consistent OWL ontology'.
-</rdfs:comment>
-    <owl:equivalentClass rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b22"/>
     <vann:example>
     :my-warrant a amo:Warrant ;
         amo:isWarrantIn :my-argument ;
         amo:leadsTo :my-claim .
     </vann:example>
+    <rdfs:comment xml:lang="en">A statement bridging from the evidence to the claim - e.g., 'An ontology developed in OWL is a consistent OWL ontology'.
+</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <owl:equivalentClass rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b22"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/isRebuttalIn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">is rebuttal in</rdfs:label>
-    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered a rebuttal.</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
-    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasRebuttal"/>
-    <vann:example>
-    :my-rebuttal 
-        amo:isRebuttalIn :my-argument .
-
-    :my-argument a amo:Argument .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/isEvidenceIn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">is evidence in</rdfs:label>
-    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered an evidence.</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
-    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasEvidence"/>
-    <vann:example>
-    :my-evidence 
-        amo:isEvidenceIn :my-argument .
-
-    :my-argument a amo:Argument .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b18">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isEvidenceIn"/>
-    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b5">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isWarrantIn"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b6"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/proves">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">proves</rdfs:label>
-    <skos:note xml:lang="en">By means of the property chain defined, the assertion that links an evidence to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties).</skos:note>
-    <rdfs:comment xml:lang="en">An evidence that founds a claim of an argument.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Evidence"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/Claim"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/relatesTo"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedAsEvidenceBy"/>
-    <owl:propertyChainAxiom rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b7"/>
-    <vann:example>
-    :my-evidence a amo:Evidence ;
-        amo:proves :my-claim .
-
-    :my-claim a amo:Claim .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b32">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/Qualifier"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b20">
-    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b18"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/Claim">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">claim</rdfs:label>
-    <rdfs:comment xml:lang="en">A fact that must be established - e.g., 'This is a consistent OWL ontology'.</rdfs:comment>
-    <owl:equivalentClass rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b26"/>
-    <vann:example>
-    :my-claim a amo:Claim ;
-        amo:isClaimIn :my-argument ;
-        amo:isValidUnless :my-rebuttal .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b24">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b25"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b48">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="http://purl.org/spar/amo/hasWarrant"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b43">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
-    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b1">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isQualifierIn"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b2"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b45">
-    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b43"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/hasClaim">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">has claim</rdfs:label>
-    <rdfs:comment xml:lang="en">An argument includes a claim as one of its (mandatory) components.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/Claim"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
-    <vann:example>
-    :my-argument a amo:Argument ;
-        amo:hasClaim :my-claim .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b11">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b12"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b2">
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b8">
     <rdf:first rdf:resource="http://purl.org/spar/amo/hasClaim"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b15">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b16"/>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b50">
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b47"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b51"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/Qualifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">qualifier</rdfs:label>
-    <rdfs:comment xml:lang="en">Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc.</rdfs:comment>
-    <owl:equivalentClass rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b21"/>
-    <vann:example>
-    :my-qualifier a amo:Qualifier ;
-        amo:isQualifierIn :my-argument ;
-        amo:forces :my-claim .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/isWarrantIn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">is warrant in</rdfs:label>
-    <rdfs:comment xml:lang="en">An argumentative entity linked to an argument in which it is considered a warrant.</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/isInvolvedIn"/>
-    <owl:inverseOf rdf:resource="http://purl.org/spar/amo/hasWarrant"/>
-    <vann:example>
-    :my-warrant 
-        amo:isWarrantIn :my-argument .
-
-    :my-argument a amo:Argument .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b22">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b24"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b14">
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b27">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isRebuttalIn"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isClaimIn"/>
     <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b29">
-    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b27"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b57">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isQualifierIn"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b58"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/amo/hasWarrant">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="en">has warrant</rdfs:label>
-    <rdfs:comment xml:lang="en">An argument includes a warrant as one of its (mandatory) components.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/amo/Warrant"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
     <vann:example>
     :my-argument a amo:Argument ;
         amo:hasWarrant :my-warrant .
     </vann:example>
+    <rdfs:comment xml:lang="en">An argument includes a warrant as one of its (mandatory) components.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/amo/Warrant"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/amo/involves"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b6">
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b55">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/isClaimIn"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b56"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b29">
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b27"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b36">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b16">
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b14"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b2">
     <rdf:first rdf:resource="http://purl.org/spar/amo/hasClaim"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b23">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isWarrantIn"/>
-    <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b41">
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b41">
     <rdf:first rdf:resource="http://purl.org/spar/amo/Rebuttal"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b42"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b42"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b46">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b50"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/spar/amo/Rebuttal">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">rebuttal</rdfs:label>
-    <rdfs:comment xml:lang="en">Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'.</rdfs:comment>
-    <owl:equivalentClass rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b13"/>
-    <vann:example>
-    :my-rebuttal a amo:Rebuttal ;
-        amo:isRebuttalIn :my-argument .
-
-    :my-claim 
-        amo:isValidUnless :my-rebuttal .
-    </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b19">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b20"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b58">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isRebuttalIn"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b59"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b25">
-    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b23"/>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b20">
+    <rdf:first rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b18"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b38">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/Backing"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b39"/>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b31">
+    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b32"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b4">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/hasRebuttal"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b37">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b38"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b7">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/isEvidenceIn"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b8"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b53">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
-    <owl:members rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b54"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b16">
-    <rdf:first rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b14"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b31">
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b15">
     <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b32"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b28">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/ArgumentationEntity"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b29"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b30">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b31"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b40">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/Evidence"/>
-    <rdf:rest rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b41"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b9">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b11"/>
+    <rdf:rest rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b16"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#note">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b17">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b19"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b8">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/hasClaim"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b33">
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b46">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b34"/>
+    <owl:intersectionOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b50"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n1a0a3a68be7f463a92e2a2d38d5834b0b35">
-    <rdf:first rdf:resource="http://purl.org/spar/amo/Qualifier"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b37">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b38"/>
   </rdf:Description>
 </rdf:RDF>
