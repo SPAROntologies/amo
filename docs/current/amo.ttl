@@ -29,7 +29,7 @@ dc:title a owl:AnnotationProperty .
     dc:contributor "Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)"^^xsd:string ;
     dc:creator "Fabio Vitali (https://orcid.org/0000-0002-7562-5203)"^^xsd:string,
         "Silvio Peroni (https://orcid.org/0000-0003-0530-4305)"^^xsd:string ;
-    dc:date "2026-09-30" ;
+    dc:date "2026-10-05" ;
     dc:description """
 The **_Argument Model Ontology (AMO)_** is an OWL 2 DL ontology that aims to encode the [Toulmin's theory](https://doi.org/10.1017/CBO9780511840005) through OWL classes and properties, in order to describe a web of inter-linked entities that participate, with a specific role, in one or more arguments.
 
@@ -55,8 +55,8 @@ In the following subsections, we introduce some examples to showcase how to use 
 
 The prefixes that are used in all the examples provided below are defined as follows:
 
+    @prefix : <http://www.sparontologies.net/example/> .
     @prefix amo: <http://purl.org/spar/amo/> .
-    @prefix : <http://example.org/> .
 
 ### Describing the components of an argument
 
@@ -101,8 +101,8 @@ In the following subsections, some of them are introduced together with their re
 
 The prefixes that are used in all the SPARQL queries provided below are defined as follows:
 
+    PREFIX : <http://www.sparontologies.net/example/>
     PREFIX amo: <http://purl.org/spar/amo/>
-    PREFIX : <http://example.org/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 ### CQ1
@@ -137,28 +137,33 @@ What is the degree of force of a given claim, and under which rebuttals is it no
 
 """@en ;
     dc:title "The Argument Model Ontology (AMO)"@en ;
-    dcterms:bibliographicCitation "Peroni, S., Tomasi, F., Vitali, F., & Zingoni, J. (2013, January). Semantic lenses as exploration method for scholarly articles. In Italian Research Conference on Digital Libraries (pp. 118-129). Berlin, Heidelberg: Springer Berlin Heidelberg. DOI: https://doi.org/10.1007/978-3-642-54347-0_13." ;
+    dcterms:bibliographicCitation "Peroni, S., Tomasi, F., Vitali, F., Zingoni, J. (2014). Semantic Lenses as Exploration Method for Scholarly Articles. In: Catarci, T., Ferro, N., Poggi, A. (eds) Bridging Between Cultural Heritage Institutions. IRCDL 2013. Communications in Computer and Information Science, vol 385. Springer, Berlin, Heidelberg. https://doi.org/10.1007/978-3-642-54347-0_13." ;
     dcterms:created "2011-05-04" ;
     dcterms:issued "2011-05-04" ;
     dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-09-30" ;
+    dcterms:modified "2026-10-05" ;
     dcterms:publisher <https://ror.org/00wb4mk85> ;
     dcterms:source <https://github.com/SPAROntologies/amo/blob/master/docs/cq.md> ;
     bibo:doi "TBA" ;
     bibo:status <http://purl.org/ontology/bibo/status/published> ;
     vann:preferredNamespacePrefix "amo"@en ;
     vann:preferredNamespaceUri "http://purl.org/spar/amo"@en ;
-    owl:backwardCompatibleWith amo:2011-05-04 ;
+    owl:backwardCompatibleWith amo:2026-09-30 ;
     owl:imports cito: ;
-    owl:priorVersion amo:2011-05-04 ;
-    owl:versionIRI amo:2026-09-30 ;
-    owl:versionInfo "1.0.1"^^xsd:string ;
-    foaf:logo <https://github.com/SPAROntologies/amo/blob/master/spar.png> ;
+    owl:priorVersion amo:2026-09-30 ;
+    owl:versionIRI amo:2026-10-05 ;
+    owl:versionInfo "1.0.2"^^xsd:string ;
+    vann:changes <https://github.com/SPAROntologies/amo/blob/master/CHANGELOG.md> ;
+    foaf:logo <https://github.com/SPAROntologies/sparontologies.github.io/blob/master/static/img/spar/spar-logo.png> ;
     schema:codeRepository <https://github.com/SPAROntologies/amo> ;
     schema:image <https://github.com/SPAROntologies/amo/blob/master/docs/current/amo.png>,
         <https://github.com/SPAROntologies/amo/blob/master/docs/current/argument.png> ;
     schema:includedInDataCatalog <https://fairsharing.org/> ;
-    schema:keywords "argument model"@en,
+    dc:language <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    schema:keywords 
+        "SPAR Ontologies"@en ,
+        "Semantic Publishing and Referencing Ontologies"@en ,
+        "argument model"@en,
         "bibliometrics"@en,
         "scholarly publishing"@en,
         "scientometrics"@en,
@@ -525,8 +530,7 @@ amo:Claim a owl:Class ;
                         owl:someValuesFrom amo:Argument ] ) ] ;
     vs:term_status reg:statusStable .
 
-amo:relatesTo a owl:ObjectProperty,
-        owl:SymmetricProperty ;
+amo:relatesTo a owl:ObjectProperty ;
     rdfs:label "relates to"@en ;
     vann:example """
     :my-evidence a amo:Evidence ;

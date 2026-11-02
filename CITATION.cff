@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+title: The Argument Model Ontology (AMO)
+message: >-
+If you use this software, please cite it using the
+metadata from this file.
+type: software
+authors:
+- given-names: Silvio
+  family-names: Peroni
+  orcid: 'https://orcid.org/0000-0003-0530-4305'
+- given-names: Fabio
+  family-names: Vitali
+  orcid: 'https://orcid.org/0000-0002-7562-5203'
+repository-code: 'https://github.com/SPAROntologies/amo'
+abstract: The Argument Model Ontology (AMO) is an OWL 2 DL ontology that aims to encode the Toulmin's theory through OWL classes and properties, in order to describe a web of inter-linked entities that participate, with a specific role, in one or more arguments. 
+keywords:
+- argument models
+- bibliometrics
+- scholarly publishing
+- scientometrics
+- semantic publishing
+license: CC-BY-4.0
+version: 1.0.2
+date-released: '2026-10-05'
+preferred-citation:
+  type: conference-paper
+  authors:
+  - family-names: "Peroni"
+    given-names: "Silvio"
+    orcid: "https://orcid.org/0000-0003-0530-4305"
+  - family-names: "Vitali"
+    given-names: "Fabio"
+    orcid: "https://orcid.org/0000-0002-7562-5203"
+
+  - family-names: "Tomasi"
+    given-names: "Francesca"
+    orcid: ""
+  - family-names: "Zingoni"
+    given-names: "J"
+    orcid: ""
+  doi: "10.1007/978-3-642-54347-0_13"
+  collection-title: "Bridging Between Cultural Heritage Institutions"
+  collection-type: "proceedings"
+  editors:
+  - family-names: "Catarci"
+    given-names: "T."
+  - family-names: "Ferro"
+    given-names: "N."
+  - family-names: "Poggi"
+    given-names: "A."
+  volume: 385
+  notes: "IRCDL 2013"
+  title: "Semantic Lenses as Exploration Method for Scholarly Articles"
+  year: 2014
+  publisher:
+    name: "Springer"
+    city: "Berlin, Heidelberg"
+    country: "DE"

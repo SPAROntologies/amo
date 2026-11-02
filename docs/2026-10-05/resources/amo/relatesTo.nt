@@ -1,0 +1,14 @@
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:nac206eba9ad849d79fa50974ed88d668b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b32 .
+_:nac206eba9ad849d79fa50974ed88d668b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "An argumentation entity relates to another one in some way - for example, it is the evidence that is used to prove a claim of an argument."@en .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#label> "relates to"@en .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:nac206eba9ad849d79fa50974ed88d668b30 .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/amo/> .
+_:nac206eba9ad849d79fa50974ed88d668b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/Qualifier> .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/amo/ArgumentationEntity> .
+_:nac206eba9ad849d79fa50974ed88d668b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/amo/ArgumentationEntity> .
+_:nac206eba9ad849d79fa50974ed88d668b30 <http://www.w3.org/2002/07/owl#unionOf> _:nac206eba9ad849d79fa50974ed88d668b31 .
+<http://purl.org/spar/amo/relatesTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:nac206eba9ad849d79fa50974ed88d668b30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/amo/relatesTo> <http://purl.org/vocab/vann/example> "\n    :my-evidence a amo:Evidence ;\n        amo:relatesTo :my-claim .\n\n    :my-claim a amo:Claim .\n    " .

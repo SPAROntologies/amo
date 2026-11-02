@@ -1,0 +1,25 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+amo:Rebuttal a owl:Class ;
+    rdfs:label "rebuttal"@en ;
+    vann:example """
+    :my-rebuttal a amo:Rebuttal ;
+        amo:isRebuttalIn :my-argument .
+
+    :my-claim 
+        amo:isValidUnless :my-rebuttal .
+    """ ;
+    rdfs:comment "Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'."@en ;
+    rdfs:isDefinedBy amo: ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( amo:ArgumentationEntity [ a owl:Restriction ;
+                        owl:onProperty amo:isRebuttalIn ;
+                        owl:someValuesFrom amo:Argument ] ) ] ;
+    vs:term_status reg:statusStable .
+
