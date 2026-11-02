@@ -147,15 +147,15 @@ What is the degree of force of a given claim, and under which rebuttals is it no
         rdfs:range amo:Claim ;
         rdfs:subPropertyOf amo:relatesTo,
             cito:confirms ;
-        owl:propertyChainAxiom _:nac206eba9ad849d79fa50974ed88d668b5 ;
+        owl:propertyChainAxiom _:n6fa01680b72a4431a70accdf2b2ea716b5 ;
         vs:term_status reg:statusStable ;
         skos:note "A warrant that points to a claim from the related evidence within an argument."@en,
             "By means of the property chain defined, the assertion that links a warrant to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en .
 
-    _:nac206eba9ad849d79fa50974ed88d668b5 rdf:first amo:isWarrantIn ;
-        rdf:rest _:nac206eba9ad849d79fa50974ed88d668b6 .
+    _:n6fa01680b72a4431a70accdf2b2ea716b5 rdf:first amo:isWarrantIn ;
+        rdf:rest _:n6fa01680b72a4431a70accdf2b2ea716b6 .
 
-    _:nac206eba9ad849d79fa50974ed88d668b6 rdf:first amo:hasClaim ;
+    _:n6fa01680b72a4431a70accdf2b2ea716b6 rdf:first amo:hasClaim ;
         rdf:rest () .
 }
 
@@ -195,10 +195,10 @@ What is the degree of force of a given claim, and under which rebuttals is it no
         ],
         "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
           {
-            "@id": "http://purl.org/spar/amo/relatesTo"
+            "@id": "http://purl.org/spar/cito/confirms"
           },
           {
-            "@id": "http://purl.org/spar/cito/confirms"
+            "@id": "http://purl.org/spar/amo/relatesTo"
           }
         ],
         "http://www.w3.org/2002/07/owl#propertyChainAxiom": [
@@ -232,22 +232,22 @@ What is the degree of force of a given claim, and under which rebuttals is it no
     ],
     "@id": "http://purl.org/spar/amo"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_0f4ada2a078202f8f3653a206608d508_Relation_prov_3 role=tabpanel><pre class="mb-0 small"><code>_:nac206eba9ad849d79fa50974ed88d668b5 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/amo/isWarrantIn> &lt;http://purl.org/spar/amo> .
-&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2002/07/owl#propertyChainAxiom> _:nac206eba9ad849d79fa50974ed88d668b5 &lt;http://purl.org/spar/amo> .
-_:nac206eba9ad849d79fa50974ed88d668b6 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> &lt;http://purl.org/spar/amo> .
-&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2004/02/skos/core#note> "A warrant that points to a claim from the related evidence within an argument."@en &lt;http://purl.org/spar/amo> .
-&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2000/01/rdf-schema#domain> &lt;http://purl.org/spar/amo/Warrant> &lt;http://purl.org/spar/amo> .
-&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#ObjectProperty> &lt;http://purl.org/spar/amo> .
-&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/amo/> &lt;http://purl.org/spar/amo> .
-&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2000/01/rdf-schema#label> "leads to"@en &lt;http://purl.org/spar/amo> .
-_:nac206eba9ad849d79fa50974ed88d668b5 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nac206eba9ad849d79fa50974ed88d668b6 &lt;http://purl.org/spar/amo> .
-&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2000/01/rdf-schema#subPropertyOf> &lt;http://purl.org/spar/amo/relatesTo> &lt;http://purl.org/spar/amo> .
+]</code></pre></div><div class="tab-pane fade" id=id_0f4ada2a078202f8f3653a206608d508_Relation_prov_3 role=tabpanel><pre class="mb-0 small"><code>_:n6fa01680b72a4431a70accdf2b2ea716b6 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/amo/hasClaim> &lt;http://purl.org/spar/amo> .
 &lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2000/01/rdf-schema#range> &lt;http://purl.org/spar/amo/Claim> &lt;http://purl.org/spar/amo> .
-&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2004/02/skos/core#note> "By means of the property chain defined, the assertion that links a warrant to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en &lt;http://purl.org/spar/amo> .
-_:nac206eba9ad849d79fa50974ed88d668b6 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/amo/hasClaim> &lt;http://purl.org/spar/amo> .
-&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2000/01/rdf-schema#subPropertyOf> &lt;http://purl.org/spar/cito/confirms> &lt;http://purl.org/spar/amo> .
+&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2002/07/owl#propertyChainAxiom> _:n6fa01680b72a4431a70accdf2b2ea716b5 &lt;http://purl.org/spar/amo> .
 &lt;http://purl.org/spar/amo/leadsTo> &lt;http://purl.org/vocab/vann/example> "\n    :my-warrant a amo:Warrant ;\n        amo:leadsTo :my-claim .\n\n    :my-claim a amo:Claim ." &lt;http://purl.org/spar/amo> .
+&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2000/01/rdf-schema#subPropertyOf> &lt;http://purl.org/spar/cito/confirms> &lt;http://purl.org/spar/amo> .
+&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2004/02/skos/core#note> "A warrant that points to a claim from the related evidence within an argument."@en &lt;http://purl.org/spar/amo> .
+_:n6fa01680b72a4431a70accdf2b2ea716b5 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/amo/isWarrantIn> &lt;http://purl.org/spar/amo> .
+&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2000/01/rdf-schema#domain> &lt;http://purl.org/spar/amo/Warrant> &lt;http://purl.org/spar/amo> .
+&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/amo/> &lt;http://purl.org/spar/amo> .
+_:n6fa01680b72a4431a70accdf2b2ea716b6 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> &lt;http://purl.org/spar/amo> .
 &lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/amo> .
+&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2000/01/rdf-schema#label> "leads to"@en &lt;http://purl.org/spar/amo> .
+_:n6fa01680b72a4431a70accdf2b2ea716b5 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6fa01680b72a4431a70accdf2b2ea716b6 &lt;http://purl.org/spar/amo> .
+&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#ObjectProperty> &lt;http://purl.org/spar/amo> .
+&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2004/02/skos/core#note> "By means of the property chain defined, the assertion that links a warrant to the relative claim is automatically inferred starting from the high-level description of an argument (realized through the sub-properties of 'involves' and their inverse properties)."@en &lt;http://purl.org/spar/amo> .
+&lt;http://purl.org/spar/amo/leadsTo> &lt;http://www.w3.org/2000/01/rdf-schema#subPropertyOf> &lt;http://purl.org/spar/amo/relatesTo> &lt;http://purl.org/spar/amo> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../amo.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 

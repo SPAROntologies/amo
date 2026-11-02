@@ -38,10 +38,10 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
-        "@id": "http://purl.org/spar/amo/relatesTo"
+        "@id": "http://purl.org/spar/cito/givesBackgroundTo"
       },
       {
-        "@id": "http://purl.org/spar/cito/givesBackgroundTo"
+        "@id": "http://purl.org/spar/amo/relatesTo"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [

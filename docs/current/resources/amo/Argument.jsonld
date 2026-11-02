@@ -28,7 +28,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:nac206eba9ad849d79fa50974ed88d668b46"
+        "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b46"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "@id": "_:nac206eba9ad849d79fa50974ed88d668b46",
+    "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b46",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -46,20 +46,20 @@
       {
         "@list": [
           {
-            "@id": "_:nac206eba9ad849d79fa50974ed88d668b47"
+            "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b47"
           },
           {
-            "@id": "_:nac206eba9ad849d79fa50974ed88d668b48"
+            "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b48"
           },
           {
-            "@id": "_:nac206eba9ad849d79fa50974ed88d668b49"
+            "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b49"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:nac206eba9ad849d79fa50974ed88d668b47",
+    "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b47",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "@id": "_:nac206eba9ad849d79fa50974ed88d668b48",
+    "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b48",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -93,7 +93,7 @@
     ]
   },
   {
-    "@id": "_:nac206eba9ad849d79fa50974ed88d668b49",
+    "@id": "_:n6fa01680b72a4431a70accdf2b2ea716b49",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

@@ -7,21 +7,21 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/amo/Qualifier">
+    <rdfs:label xml:lang="en">qualifier</rdfs:label>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <owl:equivalentClass rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b21"/>
     <vann:example>
     :my-qualifier a amo:Qualifier ;
         amo:isQualifierIn :my-argument ;
         amo:forces :my-claim .
     </vann:example>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b21"/>
-    <rdfs:comment xml:lang="en">Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc.</rdfs:comment>
-    <rdfs:label xml:lang="en">qualifier</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/amo/"/>
+    <rdfs:comment xml:lang="en">Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nac206eba9ad849d79fa50974ed88d668b21">
-    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isQualifierIn"/>
+  <rdf:Description rdf:nodeID="n6fa01680b72a4431a70accdf2b2ea716b21">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:someValuesFrom rdf:resource="http://purl.org/spar/amo/Argument"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/amo/isQualifierIn"/>
   </rdf:Description>
 </rdf:RDF>
